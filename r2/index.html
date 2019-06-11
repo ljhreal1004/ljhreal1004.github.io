@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <title>네이버 클로바</title>
+    <style>
+    /* common.css */    
+    .ck_item, .ra_item { display:none; }
+    .hd { position:relative; }  
+        #main{background-color: #000;}
+    #main video{margin-left: 350px; }
+    .logo { display:block; width: 152px; height: 32px; 
+        background-image:url("./images/logo-wh.png") ; 
+        background-repeat:no-repeat; background-size: 145px auto; 
+        position:absolute;  z-index:50; 
+        top:3%; left:calc(50% - 76px); } 
+    #gnb { width:650px; height:50px; margin:0 auto;  margin-top:4.5%; }
+    #gnb li { float:left; padding:1em 2.4em; }   
+    #gnb li a { font-size:1.3em; color:#fff; font-weight:bold; }  
+    #gnb li a:hover { text-decoration:underline; color:#2c8; }
+    .mob_title1{text-align: center; border-bottom: 2px solid #ccc;}
+        .1st_btn{background-image: url(./images/m_lst_btn.png); background-size: cover; background-repeat: no-repeat; width: 32px; height: 32px; position: absolute; z-index: 80; left: 20px; top: 20px;}
+        .close_btn{background-image: url(./images/m_close_btn.png);background-size: cover; background-repeat: no-repeat; width: 32px; height: 32px; position: absolute; z-index: 80; right: 20px; top: 20px;}
+        .search{position: fixed; z-index: 90; width: 100vw; height: 100vh; background-color: #fff; margin-top: 0; right: -100%; transition: 0.8s; }
+        .mobile.search_btn{background-image: url(./images/m_search_btn.png); background-size: cover; width: 32px; background-position: center center; height: 32px; position: absolute; z-index: 80; right: 20px; top: 15px;}
+        .input_data, .sub_btn{display: block; width: 120px; line-height: 30px; margin-left: 50px; text-align: center; color: #333; border: 1px solid #333; float: left; margin-top: 15px;}
+        
+    #tnb { position:absolute; z-index:50; width:190px; right:5%; top:12%; }    
+    #tnb li { float:left; position:relative; line-height:32px; width:70px; }
+    #tnb li a { display:block; color:#fff; font-size:0.8em; text-align:center; }
+    #tnb li:hover a { color:#2c8; }    
+    #tnb li.item1 a.dp1:after { content:""; display:block; width:8px; height:5px; 
+        background-image:url("./images/icon_header.png"); 
+        background-position:0px 0px; background-repeat:no-repeat; 
+        position:absolute; right:5px; top:14px; }
+    #tnb li.item1:hover a.dp1:after { background-position:0px -5px; }    
+    #tnb li .col_sub { position:absolute; top:32px; left:-40px; z-index:50; height:0; overflow:hidden; transition:0.6s; }
+    #tnb li .col_sub li { clear:both; width:70px; }    
+    #tnb li:hover .col_sub {  height:120px;  }  
+    #tnb li:hover .col_sub a:hover { text-decoration:underline; }    
+    .search_btn { display:block; width:21px; height:21px; background-image:url("./images/icon_header.png"); background-position:-18px 0px; 
+        background-repeat:no-repeat; margin-left:15px; margin-top:5px; }
+    .vs_btn_box { position:absolute; right:5%; top:45%; width:200px; }
+    .vs_btn_box li { float:left; height:40px; }
+    .vs_btn_box li button { color:#555; width:46px; height:40px; font-size:1.1em; 
+        text-align:center; line-height:34px; font-weight:bold; cursor:pointer; border:3px solid transparent; border-radius:30px; }
+    .vs_btn_box li.divider { width:100px; height:1px; background:#fff; 
+        margin:0 auto; margin-top: 19px; }    
+    .vs_btn_box li button.on { color:#fff; border:3px solid #fff; } 
+    .page .column li { width:50%; position:relative; height:100vh; }    
+    .page .column li.item1 { float:left; }    
+    .page .column li.item2 { float:right; } 
+    .page .pic { position:absolute; top:10%; left:10%; display:block; animation-name:pic_ani1; animation-duration:2s; animation-fill-mode:both; }
+    .page .page_img1 { animation-delay:0.5s; }     
+    .page .page_img2 { animation-delay:1s; } 
+    #page2.page .page_img2 { left:25%; top:7%; }    
+    .page .page_img3 { animation-delay:1.5s; }      
+    .page_tit1 { color:#0ed087; font-style:italic; text-transform:uppercase; padding-top: 2em;  padding-left:60px; }    
+    .page_tit2 { color:#333; font-family: 'Noto Serif KR', serif; line-height:1.6; 
+        padding-bottom:1em; padding-top:1.5em; padding-left:60px; font-size:4em; }      
+    .page_com { padding-left:60px; font-size:16px; font-weight:400; } 
+    .page_more { display:block; width: 66px; height:9px; margin-top:50px; margin-left: 60px; background-image:url("./images/ico_arrow_main.png"); }    
+    #page3 { background-color: #e9e9e9; background-size:cover; background-attachment: fixed; }    
+    .page3_img1{position: relative; left: 800px;}
+    .page3_img2{position: relative; left: 130px; top: 140px;}
+    .page_t1, .page_com1 { text-align:center; color:#3e3e3e; } 
+    .page_t1 { padding-top:3.5em; font-size:2.4em; font-family: 'Noto Serif KR', serif; } 
+    .page_com1 { font-size:1.25em; }    
+    .lb_box { width:320px; padding-top:50px; position:absolute; left:0; top:5%; z-index:50; background-color:#fff; }    
+    .lb_box li { position:relative; }    
+    .lb_box li label { display:block; font-size:1.4em; color:#333; cursor:pointer;
+        line-height:2; }
+    .lb_box li .item_box { overflow:hidden; height:0px; transition:0.6s; position:relative; }     
+    .lb_box li .item_box:before { content:""; display:block; width:32px; height:240px; position:absolute; left:20px; top:0; z-index:55; border-left:2px solid #333; }    
+    .item_tit { padding-left: 50px; font-size:2em; line-height:1.6; }    
+    .item_com { padding-left: 50px; font-size:1.1em; }    
+    #ra1:checked ~ .lb_box li.item1 .item_box { height:240px; }         
+    #ra2:checked ~ .lb_box li.item2 .item_box { height:240px; }         
+    #ra3:checked ~ .lb_box li.item3 .item_box { height:240px; }         
+    #ra4:checked ~ .lb_box li.item4 .item_box { height:240px; }         
+        
+    .pic_box { width:3000px; padding-left:320px; margin-left:0; transition:0.6s; }    
+    .pic_box li { float:left; }    
+    .pic_box li img { width:400px; margin-top: 100px; }    
+    #ra1:checked ~ .pic_box { margin-left:0px;  }         
+    #ra2:checked ~ .pic_box { margin-left:-400px; }         
+    #ra3:checked ~ .pic_box { margin-left:-800px;  }         
+    #ra4:checked ~ .pic_box { margin-left:-1200px; }   
+    #ft { background-color: #333333; }    
+    #fnb { clear:both; padding-left:50px; }
+    #fnb li { clear:both; line-height:50px; }    
+    #fnb li.item1 { margin-top:60px; }    
+    #fnb li a { display:block; color:#fff; }  
+    .copyright { color:#9a948b; padding-left:90px; line-height:2.4; } 
+    .copyright span { display:block; }
+    .to_top { display:block; width: 16px; height:44px; position:fixed;
+        bottom:10%; right:10%; z-index:100;
+        background-image:url("./images/btn_go_top.png"); 
+        background-repeat:no-repeat; }    
+    @keyframes pic_ani1 {
+        0% { opacity:0; }
+        100% { opacity:1; }
+    }    
+    .mobile { display:none; } 
+    @media screen and (max-width:767px){
+        .mobile { display:block; }
+    }    
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width:767px)">
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width:768px) and (max-width:1024px)">
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width:1025px)">
+    <script>
+    $(document).ready(function(){
+       var tar = document.getElementById("#vdo1");    
+       $(".vs_btn_box li").click(function(){
+           var vs_sel = $(this).attr("class");
+           if(vs_sel=="item2"){
+               $("#vdo1").attr("src","./images/clovacore.mp4"); 
+               $(".vs_btn_box li button").removeClass("on");
+               $(this).find("button").addClass("on");
+           } else if(vs_sel=="item1"){
+               $("#vdo1").attr("src","./images/Makingfilm.mp4"); 
+               $(".vs_btn_box li button").removeClass("on");
+               $(this).find("button").addClass("on");
+           } else {
+               return false; 
+           }
+       }); 
+        $(".to_top").fadeOut();
+        $(window).scroll(function(){
+            var sc_top = $(window).scrollTop(); 
+            if(sc_top>=300) {
+                $(".to_top").fadeIn();
+            } else {
+                $(".to_top").fadeOut();
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <input type="checkbox" class="ck_item" id="lst_ck">
+    <input type="checkbox" class="ck_item" id="search_ck">
+    <header class="page hd" id="main">
+       <video poster="./images/thumb.JPG" id="vdo1" autoplay loop muted width="1220px" height="1024px" src="./images/Makingfilm.mp4">
+        </video>
+        <a href="index.html" class="logo"></a>
+        <nav id="gnb">
+            <h3 class="mobile mob_title1">MENU</h3>
+            <ul class="mn">
+                <li class="item1"><a href="new.html">앱</a></li>
+                <li class="item2"><a href="brand.html">제품</a></li>
+                <li class="item3"><a href="product.html">플랫폼</a></li>
+                <li class="item4"><a href="store.html">파트너</a></li>
+                <li class="item5"><a href="research.html">Research</a></li>
+            </ul>
+            <label for="lst_ck" class="mobile close_btn"></label>
+        </nav>
+        <nav id="tnb">
+            <ul class="mn">
+                <li class="item1">
+                    <a href="" class="dp1">KO</a>
+                    <ul class="col_sub">
+                        <li class="it1"><a href="index.html">KO</a></li>
+                        <li class="it2"><a href="index_en.html">EN</a></li>
+                        <li class="it3"><a href="index_cn.html">CN</a></li>
+                    </ul>
+                </li>
+                <li class="item2"><a href="product.html" class="search_btn"></a></li>
+            </ul>
+        </nav>
+        <ul class="vs_btn_box desk">
+            <li class="item1"><button class="on">01</button></li>
+            <li class="divider"></li>
+            <li class="item2"><button>02</button></li>
+        </ul>
+        <nav class="mobile search">
+            <h3 class="mob_title1">SEARCH</h3>
+            <form action="">
+                <input type="text" id="keywords" class="input_data">
+                <input type="submit" id="sub_btn" class="sub_btn">
+            </form>
+            <h4 class="mob_title2"></h4>
+            <ul class="mob_menu">
+                <li class="item1"><a href="">미니언즈</a></li>
+                <li class="item2"><a href="">미니</a></li>
+                <li class="item3"><a href="">스마트 패키지</a></li>
+                <li class="item4"><a href="">VIBE</a></li>
+                <li class="item5"><a href="">도라에몽</a></li>
+            </ul>
+            <label for="search_ck" class="close_btn"></label>
+        </nav>
+        <label for="lst_ck" class="mobile lst_btn"></label>
+        <label for="search_ck" class="mobile search_btn"></label>
+    </header>
+    <div class="page" id="page1">
+        <ul class="column">
+            <li class="item1">
+                <img src="./images/section1_img3.jpg" alt="2페이지3" class="pic page_img3">
+            </li>
+            <li class="item2">
+                <h4 class="page_tit1">APP</h4>
+                <h2 class="page_tit2">내 손안의 인공지능 비서<br> 네이버 클로바</h2>
+                <p class="page_com">오늘 필요한 정보와 일정을 알아서 관리해주고<br>당신의 취향을 저격할 콘텐츠와 음악을 추천해주는 것은 물론<br> 심심할 땐 친구처럼 음성으로 대화도 할 수 있어요.</p>
+                <a href="brand.html" class="page_more"></a>
+            </li>
+        </ul>
+    </div><!--CSS 커서 이미지 속성 유알엘-->
+    <div class="page" id="page2">
+        <ul class="column">
+            <li class="item1">
+                <h4 class="page_tit1">Platform</h4>
+                <h2 class="page_tit2">Clova Platform</h2>
+                <p class="page_com">클로바의 스마트 스피커와 다양한 디바이스에서 사용할 수 있는<br>클라우드 기반의 인공지능 서비스 플랫폼입니다.<br>클로바와 함께하면 고객과 직관적으로 상호작용할 수 있는<br> 풍부한 콘텐츠와 다양한 서비스를 누구나 쉽게 구축할 수 있습니다.</p>
+                <a href="new.html" class="page_more"></a>
+            </li>
+            <li class="item2">
+                <img src="./images/section2_img2.jpg" alt="" class="pic page_img2">
+            </li>
+        </ul>
+    </div>
+    <div class="page" id="page3">
+        <h3 class="page_t1">최적의 스마트홈 디바이스</h3>
+        <p class="page_com1">4개의 마이크 시스템과 소음 제거 기능으로 음성 명령을 명확히 인지하고,<br>
+        20W 스피커로 집 안 어디서나 풍부한 사운드를 즐길 수 있습니다.    
+        </p>
+        <img class="page3_img1" src="./images/machine_03.jpg" alt="호호호" width="292px">
+        <img class="page3_img2" src="./images/icon.jpg" alt="아이콘" width="1069px">
+    </div>
+    <div class="page" id="page4">
+        <div id="img_sl">
+        <input type="radio" class="ra_item" id="ra1" name="ra_item1" checked>
+        <input type="radio" class="ra_item" id="ra2" name="ra_item1">
+        <input type="radio" class="ra_item" id="ra3" name="ra_item1">
+        <input type="radio" class="ra_item" id="ra4" name="ra_item1">
+            <ul class="lb_box">
+                <li class="item1">
+                    <label for="ra1">Clova Friends mini</label>
+                    <div class="item_box">
+                        <h2 class="item_tit">Clova Friends mini</h2>
+                        <p class="item_com">더 작고 가벼워진 스마트 스피커</p>
+                    </div>
+                </li>
+                <li class="item2">
+                    <label for="ra2">Doraemon edition</label>
+                    <div class="item_box">
+                        <h2 class="item_tit">Doraemon edition</h2>
+                        <p class="item_com">고양이형 만능 로봇 도라에몽을 모티브로 한 스마트 스피커</p>
+                    </div>
+                </li>
+                <li class="item3">
+                    <label for="ra3">MINIONS edition</label>
+                    <div class="item_box">
+                        <h2 class="item_tit">MINIONS edition</h2>
+                        <p class="item_com">귀여운 악동 미니언즈를 모티브로한 스마트 스피커</p>
+                    </div>
+                </li>
+                <li class="item4">
+                    <label for="ra4">Clova Friends</label>
+                    <div class="item_box">
+                        <h2 class="item_tit">Clova Friends</h2>
+                        <p class="item_com">음악 추천부터 네이버 검색까지 다재다능한 스마트 스피커</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="pic_box">
+                <li class="item1"><a href=""><img src="./images/pro.jpg" alt="라인프렌즈 미니"></a></li>
+                <li class="item2"><a href=""><img src="./images/pro2.jpg" alt="도라에몽"></a></li>
+                <li class="item3"><a href=""><img src="./images/pro3.jpg" alt="미니언즈"></a></li>
+                <li class="item4"><a href=""><img src="./images/pro4.jpg" alt="라이프렌즈"></a></li>
+                <li class="item1"><a href=""><img src="./images/pro.jpg" alt="라인프렌즈 미니"></a></li>
+                <li class="item2"><a href=""><img src="./images/pro2.jpg" alt="도라에몽"></a></li>
+                <li class="item3"><a href=""><img src="./images/pro3.jpg" alt="미니언즈"></a></li>
+            </ul>
+        </div>
+    </div>
+    <footer class="page" id="ft">
+        <nav id="fnb">
+            <ul class="mn">
+                <li class="item1"><a href="sitemap.html">Clova 채용안내</a></li>
+                <li class="item2"><a href="contact.html">이용약관</a></li>
+                <li class="item2"><a href="contact.html">공지사항</a></li>
+                <li class="item2"><a href="contact.html">Powered by NAVER · LINE</a></li>
+            </ul>
+        </nav>
+        <p class="copyright">
+            <span class="txt1">Copyright ⓒ NAVER Corp. All Rights Reserved.</span>
+        </p>
+    </footer>
+    <a href="#" class="to_top"></a>
+</body>
+</html>
