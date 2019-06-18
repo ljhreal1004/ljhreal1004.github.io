@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>그린피스</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--    인터넷익스플로러 최신버전-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--    아이콘 계열의 웹앱 설정-->
+    <meta name="apple-mobile-web-app-title" content="GREENPEACE">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<!--   비아이폰 및 공통 웹앱 설정-->
+    <meta name="title" content="GREENPEACE">
+    <meta name="keywords" content="그린피스, 북극곰, 후원, 지구">
+    <meta name="description" content="국제환경단체 그린피스는 전세계 55개국에서 활동 중이며 위태로운 지구의 목소리를 대신합니다.">
+<!--    SNS에 의한 설정-->
+    <meta itemprop="name" content="GREENPEACE">
+    <meta itemprop="description" content="국제환경단체 그린피스는 전세계 55개국에서 활동 중이며 위태로운 지구의 목소리를 대신합니다.">
+    <meta itemprop="image" content="./images/thumb_sns-300x300.jpg">
+<!--   페이스북 연동설정-->
+    <meta property="fb:app_id" content="APP_ID">
+<!--    페이스북, 트위터, 카카오톡의 크롤러 연동 설정-->
+    <meta property="og:type" content="Website">
+    <meta property="og:title" content="GREENPEACE">
+    <meta property="og:url" content="./index.html">
+    <meta property="og:description" content="국제환경단체 그린피스는 전세계 55개국에서 활동 중이며 위태로운 지구의 목소리를 대신합니다.">
+    <meta property="og:image" content="./images/thumb_sns-300x300.jpg">
+<!--    메타포 아이콘 설정-->
+    <link rel="shortcut icon" href="./images/favicon.ico"><!--일반 공통적인 파비콘 설정-->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-180x180" sizes="180x180" href="./images/favicon.jpg">
+    <link rel="icon" type="image/png" size="16x16" href="./images/favicon.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+<!--구글 애널리틱스 주소 연결하기-->
+   <link rel="stylesheet" href="./common.css">
+    <style>
+/*
+        모바일(스마트폰) : -767px
+        태블릿 : 768px-959px
+        데스크탑 : 960px
+*/
+        @media screen and (max-width:767px){
+            .page_tit{font-size: 3.5em;}
+            .more{font-size: 1em;}
+            .logo{width: 120px;}
+            .menu_call img{width: 28px;}
+        }
+        @media screen and (min-width:768px){/*태블릿*/
+            .logo{width: 160px;}
+            .menu_call img{width: 32px;}
+            .col_menu li{font-size: 1.4em;}
+            .col_menu li a{font-size: 2em;}
+        }
+        @media screen and (min-width:960px){/*데스크탑*/
+            .page_tit{font-size: 7em;}
+            .more{font-size: 2em;}
+        }
+    </style>
+    <script>
+    $(document).ready(function(){
+       $(".fnb li a.ad").click(function(){
+//     var inx = $(this).index();
+           $(".fnb li a.ad").removeClass("on");
+           $(".fnb li .sub").css("display", "block");
+           $(this).addClass("on");
+           $(this).siblings(".sub").slideDown();
+       });
+    var win_h = $(window).height();
+    $(".page").each(function(index){//각 페이지마다 스크롤해야할 양을 지정
+        $(this).attr("data-page", win_h*index);
+    });
+    $(".page").on("mousewheel", function(e){
+        var secPos = parseInt($(this).attr("data-page"));
+        if(e.originalEvent.wheelDelta > 0){//위로 스크롤할 때
+            $("body, html").not(":animated").animate({scrollTop: secPos - win_h}, 600);
+        }else if(e.originalEvent.wheelDelta < 0){//아래로 스크롤할 때
+            $("body, html").not(":animated").animate({scrollTop:secPos +win_h}, 600);
+        }
+    });
+        $(".menu_call, .close_btn").click(function(){
+            $(".gnb").toggleClass("on");
+        });
+        $(window).scroll(function(){
+           var sc_top=$(window).scrollTop();//스크롤양 계산
+            if(sc_top>=200){//스크롤양이 200px이면
+                $(".hd").addClass("on");
+                $(".logo_img").attr("src","./img/img_logo2.png");
+                $(".menu_btn").attr("src","./img/img_menu2.png")
+            }else {
+                $(".hd").removeClass("on");
+                $(".logo_img").attr("src","./img/img_logo.png");
+                $(".menu_btn").attr("src","./img/img_menu.pngs")
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <div class="page" id="page1">
+        <h2 class="page_tit">Introduce</h2>
+        <h3 class="page_s_tit">국제환경단체 그린피스는 전세계 55개국에서 활동 중이며 위태로운 지구의 목소리를 대신합니다.</h3>
+        <a href="" class="more"><span class="txt">VIEW MORE INFORMATION</span><span class="plus"></span></a>
+    </div>
+    <div class="page" id="page2">
+        <h2 class="page_tit">Donate</h2>
+        <h3 class="page_s_tit">당신의 후원이 변화를 만듭니다.우리의 지구를 함께 지켜주세요.</h3>
+        <a href="" class="more"><span class="txt">VIEW MORE INFORMATION</span><span class="plus"></span></a>
+    </div>
+    <div class="page" id="page3">
+        <h2 class="page_tit">Campaign</h2>
+        <h3 class="page_s_tit">기후변화, 플라스틱 오염, 남획으로 파괴되는 바다를 지켜주세요. </h3>
+        <a href="" class="more"><span class="txt">VIEW MORE INFORMATION</span><span class="plus"></span></a>
+    </div>
+    <div class="page" id="page4">
+        <div class="vdo_fr">
+              <video poster="./images/thumb.JPG" id="vdo1" autoplay loop muted>
+                  <source src="./images/vdo.mp4" type="video/mp4">
+              </video>
+       </div>
+        <h2 class="page_tit">Join</h2>
+        <h3 class="page_s_tit">지금 행동해주세요. 여러분들의 힘으로 지구를 지킬 수 있습니다. </h3>
+        <a href="" class="more"><span class="txt">VIEW MORE INFORMATION</span><span class="plus"></span></a>
+    </div>
+    <div class="page" id="page5">
+       <nav class="fnb">
+           <ul class="fmenu">
+               <li class="item1">
+                   <a href="" class="dp1">그린피스</a>
+                   <ul class="sub">
+                       <li><a href="">성공의 역사</a></li>
+                       <li><a href="">핵심가치</a></li>
+                       <li><a href="">활동방식</a></li>
+                       <li><a href="">창설배경</a></li>
+                       <li><a href="">조직구성</a></li>
+                       <li><a href="">인재채용</a></li>
+                   </ul>
+               </li>
+               <li class="item2">
+                   <a href="" class="dp2">캠페인</a>
+                   <ul class="sub">
+                       <li><a href="">기후와 에너지</a></li>
+                       <li><a href="">해양 보호</a></li>
+                       <li><a href="">삼림 보호</a></li>
+                       <li><a href="">독성물질 제거</a></li>
+                   </ul>
+               </li>
+               <li class="item3">
+                   <a href="" class="dp3">뉴스</a>
+                   <ul class="sub">
+                       <li><a href="">국내뉴스</a></li>
+                       <li><a href="">해외동향</a></li>
+                       <li><a href="">보도자료</a></li>
+                   </ul>
+               </li>
+                <li class="item4">
+                   <a href="" class="dp4">뉴스</a>
+                   <ul class="sub">
+                       <li><a href="">국내뉴스</a></li>
+                       <li><a href="">해외동향</a></li>
+                       <li><a href="">보도자료</a></li>
+                   </ul>
+               </li>
+           </ul>
+       </nav>
+        <h2 class="page_tit">Volunteer</h2>
+        <h3 class="page_s_tit">지금 바로 자원활동가로 등록하고 그린피스와 함께 변화를 만들어 주세요.</h3>
+        <a href="" class="more"><span class="txt">VIEW MORE INFORMATION</span><span class="plus"></span></a>
+    </div>
+    <header class="hd">
+        <a href="index.html" class="logo">
+            <img src="./images/logo.png" alt="로고">
+        </a>
+        <label for="ck" class="menu_call">
+            <img src="./images/menu.png" alt="메뉴호출버튼">
+        </label>
+    </header>
+    <nav class="gnb">
+       <a href="" class="col_logo">
+           <img src="./images/logo.png" class="col_logo_img" alt="로고">
+       </a>
+       <label for="ck" class="close_btn">
+           <img src="./images/menu_close.png" alt="닫기버튼">
+       </label>
+       <div class="wd_box">
+           <h3 class="addr">지금 서명해주세요.</h3>
+           <ul class="wd_fr">
+               <li class="item1">
+                   <span class="cr_data">해양보호</span>
+                   <span class="cr_txt">캠페인</span>
+               </li>
+               <li class="item2">
+                   <span class="cr_data">플라스틱</span>
+                   <span class="cr_txt">캠페인</span>
+               </li>
+           </ul>
+       </div>
+        <ul class="col_menu">
+           <li class="item1 split"></li>
+            <li class="item2"><a href="">소개</a></li>
+            <li class="item3"><a href="">캠페인</a></li>
+            <li class="item4"><a href="">참여하기</a></li>
+            <li class="item5"><a href="">뉴스</a></li>
+            <li class="item6"><a href="">자료실</a></li>
+            <li class="item7 split"></li>
+            <li class="item8"><a href="">후원하기</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
