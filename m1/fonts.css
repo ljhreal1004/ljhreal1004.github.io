@@ -1,0 +1,10 @@
+@charset "utf-8";
+@font-face {
+    font-family:"jj";
+    src:url("./font/jj.eot?#iefix") format("ebedded-opentype"),
+        url("./font/jj.woff") format("woff"),
+        url("./font/jj.otf") format("opentype"),
+        url("./font/jj.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}

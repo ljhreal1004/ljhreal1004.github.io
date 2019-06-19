@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*m0 p0*/
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/*w0%*/
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.ck_item,
+.ra_item {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.hd {
+    height: 60px;
+    width: 100%;
+    background: #fff;
+    border-bottom: 3px solid #7fbe26;
+    position: relative;
+    top: 10px;
+}
+
+.lst_btn,
+.close_btn {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px auto;
+    text-indent: -9999px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.lst_btn {
+    position: absolute;
+    float: left;
+    background-image: url("./img/list-menu.png");
+    left: 5px;
+    top: -3px;
+}
+
+.close_btn {
+    float: right;
+    background-image: url("./img/close_n.png");
+}
+
+.log_box {
+    clear: both;
+    width: 100px;
+    height: 100px;
+    border-radius: 53px;
+    border: 2px solid #fff;
+    background: #fff;
+    margin: 40px auto;
+}
+
+.collap_wrap {
+    width: 70%;
+    height: 100%;
+    background: #7fbe26;
+}
+
+.left {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #7fbe26;
+    z-index: 999;
+    transition: 1s;
+}
+
+/*색깔 다양하게 보고싶으면 c+E*/
+#ck1:checked ~ .left {
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.gnb {
+    background-color: #fff;
+    height: 700px;
+    padding-top: 30px;
+}
+
+.gnb .dep1 {
+    text-indent: 20px;
+    color: #333333;
+    line-height: 40px;
+}
+
+.gnb .dep1 a {
+    display: block;
+    color: #7fbe26;
+    text-indent: 60px;
+}
+
+.sub {
+    /*display: none;*/
+    height: 0;
+    overflow: hidden;
+    transition: 1.2s;
+}
+
+.ra_item:checked ~ .sub {
+    /*display:block;*/
+    height: auto;
+    opacity: 1;
+}
+
+/*.ra_item:checked ~ label*/
+.abs_item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    display: block;
+    width: 80px;
+    height: auto;
+    margin: 10px auto;
+    margin: 10px auto;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+.share_btn,
+.search_btn,
+.user_btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: #595757;
+    text-align: center;
+    font-size: 18px;
+    position: absolute;
+    line-height: 60px;
+}
+
+.share_btn {
+    right: 10px;
+}
+
+.user_btn {
+    right: 40px;
+}
+
+.search_btn {
+    right: 70px;
+}
+
+.order_frame,
+.sns_frame {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    z-index: 990;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    transition: 0.5s;
+}
+
+.sns_box {
+    width: 120px;
+    height: 120px;
+    margin: 80px auto;
+    background: rgba(255, 255, 255, .5);
+}
+
+.sns_box li {
+    float: left;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.sns_box li a {
+    color: #333;
+    font-size: 30px;
+}
+
+.ck3_close {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url("./img/close_n.png");
+    position: absolute;
+    right: 100px;
+    top: 60px;
+    background-size: 20px auto;
+    background-repeat: no-repeat;
+}
+
+#ck3:checked ~ .sns_frame {
+    top: 0;
+}
+
+.order_box {
+    width: 280px;
+    height: 400px;
+    margin: 0 auto;
+    margin
+}
+
+
+.ft {
+    height: 100px;
+    background: #eee;
+    border-top: 1px solid #ccc;
+}
+
+.fnb {
+    clear: both;
+    width: 260px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.fnb li {
+    float: left;
+    padding: 4px;
+    font-size: 12px;
+}
+
+.fnb li.item1 a:after {
+    content: "|";
+    padding-left: 15px;
+}
+
+.fnb li.item2 a:after {
+    content: "|";
+    padding-left: 15px;
+}
+
+.copyright {
+    clear: both;
+    text-align: center;
+    color: #333;
+    line-height: 2.4;
+}

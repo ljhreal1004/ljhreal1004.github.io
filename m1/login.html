@@ -22,7 +22,7 @@
         <link rel="icon" href="./img/favicion1.ico">
         <link rel="shorticon icon" href="./img/favicion1.png" type="image/x-icon">
         <!-- 플러그인의 연결방식 - CDN, 다운로드 받아 연결 lastest이렇게 밑에 쓴것같이하면 항상 최신버전에 연결되서 사용할수있음-->
-        <script src="https://code.jquery.com/jquery-lastest.js"></script>
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
         <!-- 합쳐지고 최소화된 최신 CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
@@ -34,46 +34,18 @@
         <link rel="stylesheet" href="common.css">
         <title>청주시청</title>
         <style>
-            .contents {width: 100%; height: 100%;}
-            .main_box{width: 100%; height: 85%;}
-            .main_box li{float: left;
-            background-position: right bottom;
-            background-repeat: no-repeat;}
-            .main_box li.item1{width: 100%; height: 60%;
-            background-image: url("./img/forest.png");
-            background-size: 210px auto;
-            background-position: 32px 45px;}
-            .main_box li.item2{clear: both; width: 50%; height: 40%;
-            background-color: #82bbd9;
-            background-image: url("./img/river.png");
-            background-size: 100px auto;
-            background-position: 70px 115px;}
-            .main_box li.item3{width: 50%; height: 40%;
-            background-color: #9ecd5b;
-            background-image: url("./img/fields.png");
-            background-size: 100px auto;
-            background-position: 70px 115px;}
-            .thum_tit{font-family: "Noto Sans KR",sans-serif; text-align:left; font-size:22px; color: #000; font-weight: bold; padding-left: 20px; padding-top: 10px;}
-            .thum_tit_1{font-family: "Noto Sans KR",sans-serif; text-align:right; font-size:24px; color: #000; font-weight: bold;padding-right: 30px; padding-top: 210px;}
-            .thum_com{font-size: 14px; color: #000; padding-left: 20px;}
-            .thum_com_1{font-size: 14px; color: #000; text-align: right; padding-right: 20px;}
-            
-            .main_tit{font-size: 22px; color: #000; font-weight: bold; padding-top: 20px; padding-bottom: 20px; border-bottom: 3px solid #7fbe26;}
-            .mv_box{width: 80%; min-height: 200px; position: relative; margin: 0 auto; padding-top: 20px;}
-            .mv_box a{display: block; width: 100%; height: auto;}
-            .mv_box a img{display: block; width: 100%; height: auto;}
-            #video_frame{position: absolute; top: 0; left: 0; display: none; width: 80%;}
-            #video_frame:target{display: block;}
+            .contents{width: 100%; height: 100%;}
+            button, input{border:0; outline:0; background: transparent;  }
+            .contents .contents_frame{width: 100%; height: 100%;}
+            .contents .contents_frame .page{width: 100%; padding-top: 0px;}
+            .contents .contents_frame .page .blank{height:120px; clear: both;}
+            #login{clear: both; width: 85%; margin: 20px auto; text-align: center;}
+            .input_data{display: block; width: 90%; margin: 0 auto; line-height: 40px; text-indent: 14px; 
+                        border: 1px solid #333;}
+            .frm_btn{width: 70px;}
         </style>
     </head>
     <body>
-      <!--<h2>폰트어썸 이용하기</h2>
-       <a href=""><i class="fa fa-camera-retro"></i></a><!--fa뒤에 넣으면됨
-       <h2>XE-ICON 이용하기</h2>
-       <a href=""><i class="xi-share-alt-o"></i></a>
-       <a href=""><i class="xi-app"></i></a>
-        <!--FontAwesome 클래스명 :http://fontawesome-->
-    
     <!--컨트럴+/: 각주처리, []: 속성 넣을때 {}:목록 넣을때-->
     <input type="checkbox" id="ck1" class="ck_item">
     <div class="div container">
@@ -93,46 +65,29 @@
             </a>
         </header>
         <main class="contents">
-        <ul class="main_box">
-            <li class="item1">
-                <a href="">
-                    <h3 class="thum_tit_1">청주시청</h3>
-                    <p class="thum_com_1">자연과 문화가 함께하는<br>도시 청주시청입니다.</p>
-                </a>
-            </li>
-            <li class="item2">
-                <a href="">
-                    <h3 class="thum_tit">분야별 정보</h3>
-                     <p class="thum_com">분야별 정보를 공개합니다.</p>
-                </a>
-            </li>
-            <li class="item3">
-                <a href="">
-                    <h3 class="thum_tit">커뮤니티</h3>
-                    <p class="thum_com">시정소식과 주요일정이<br> 궁금하다면?</p>
-                </a>
-            </li>
-        </ul>
-        <h2 class="main_tit">청주시청 미디어</h2>
-        <div class="mv_box">
-            <a href="#video_frame">
-                <img src="./img/main_promo.jpg" alt="메인홍보동영상 캡쳐">
-            </a>
-            <div id="video_frame">
-               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Q5Rfeer9qfQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="contents_frame">
+                    <div class="page" id="page1">
+                       <div class="blank">
+                           <form action="login_ok.php" method="post" id="login">
+                               <fieldset>
+                                   <legend>로그인</legend>
+                                   <input type="text" name="userid" class="input_data" placeholder="아이디 입력" id="userid">
+                                   <input type="password" name="userpw" class="input_data" placeholder="비밀번호 입력" id="userpw">
+                               </fieldset>
+                               <div class="frm_btn_frame">
+                                   <input type="submit" value="로그인" class="frm_btn">
+                                   <input type="reset" value="취소" class="frm_btn">
+                               </div>
+                           </form>
+                       </div>
+                    </div>
             </div>
-<!--
-        <video autopaly>
-            <source src="izwon.mp4" type="video/mpeg">
-            <source src="izwon.webm"type="video/mpeg">
-        </video>
--->
-        </div>
+    
         <footer class="ft">
             <ul class="fnb">
                 <li class="item1"><a href="">이용약관</a></li>
                 <li class="item2"><a href="">개인정보처리방침</a></li>
-                <li class="item3"><a href="c_api.html">찾아오시는길</a></li>
+                <li class="item3"><a href="">찾아오시는길</a></li>
             </ul>
             <p class="copyright">&copy; All copyrights by cheongju</p>
         </footer>
@@ -147,7 +102,7 @@
               
           </div>
           <div class="breadcrumb">
-              Home
+              청주시청
           </div>
            <nav class="gnb">
               <input type="radio" name="rdo" id="ra0" class="ra_item" checked>

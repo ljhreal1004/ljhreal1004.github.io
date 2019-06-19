@@ -34,46 +34,29 @@
         <link rel="stylesheet" href="common.css">
         <title>청주시청</title>
         <style>
+            .hd{border-bottom: 0;}
             .contents {width: 100%; height: 100%;}
-            .main_box{width: 100%; height: 85%;}
-            .main_box li{float: left;
-            background-position: right bottom;
-            background-repeat: no-repeat;}
-            .main_box li.item1{width: 100%; height: 60%;
-            background-image: url("./img/forest.png");
-            background-size: 210px auto;
-            background-position: 32px 45px;}
-            .main_box li.item2{clear: both; width: 50%; height: 40%;
-            background-color: #82bbd9;
-            background-image: url("./img/river.png");
-            background-size: 100px auto;
-            background-position: 70px 115px;}
-            .main_box li.item3{width: 50%; height: 40%;
-            background-color: #9ecd5b;
-            background-image: url("./img/fields.png");
-            background-size: 100px auto;
-            background-position: 70px 115px;}
-            .thum_tit{font-family: "Noto Sans KR",sans-serif; text-align:left; font-size:22px; color: #000; font-weight: bold; padding-left: 20px; padding-top: 10px;}
-            .thum_tit_1{font-family: "Noto Sans KR",sans-serif; text-align:right; font-size:24px; color: #000; font-weight: bold;padding-right: 30px; padding-top: 210px;}
-            .thum_com{font-size: 14px; color: #000; padding-left: 20px;}
-            .thum_com_1{font-size: 14px; color: #000; text-align: right; padding-right: 20px;}
+            .contents_frame{width: 100%; height: 100%;}
+            .page{width: 100%; padding-top: 0px;}
+            .tb_btn{display: block; width: 33.3333%; line-height: 40px; text-align: center; color: #333; font-size: 1.1em; position: absolute; top: 70px; z-index: 50; background: #fff; text-decoration: none; border-bottom: 3px solid #7fbe26; }
             
-            .main_tit{font-size: 22px; color: #000; font-weight: bold; padding-top: 20px; padding-bottom: 20px; border-bottom: 3px solid #7fbe26;}
-            .mv_box{width: 80%; min-height: 200px; position: relative; margin: 0 auto; padding-top: 20px;}
-            .mv_box a{display: block; width: 100%; height: auto;}
-            .mv_box a img{display: block; width: 100%; height: auto;}
-            #video_frame{position: absolute; top: 0; left: 0; display: none; width: 80%;}
-            #video_frame:target{display: block;}
+            #page1 .tb_btn{left: 0;}
+            #page2 .tb_btn{left: 33.3333%;}
+            #page3 .tb_btn{left: 66.6666%;}
+            .page .tb_data{display: none; margin-top: 80px;}
+            .page:target .tb_data{display: block;}
+            .page:target .tb_btn{background: #7fbe26; color: #fff; text-decoration: none; border-bottom: 0;}
+            .tb_btn:after{content:"."; font-size: 50px; width: 5px; height: 5px; border-radius: 15px; position: absolute; left: 114px; top: -15px; color: #7fbe26; }
+            #page3 .tb_btn:after{ content:""; }
+            
+            .tb_data{padding-left: 20px;}
+            .ci_title{font-size: 15px; font-weight: bold;}
+            .ci_p{font-size: 13px; font-weight: bold; padding-top: 30px;}
+            .tb_data img{width: 80%; padding-left: 50px;}
+            .tb_data #p1{padding-top: 20px; text-align: center;}
         </style>
     </head>
     <body>
-      <!--<h2>폰트어썸 이용하기</h2>
-       <a href=""><i class="fa fa-camera-retro"></i></a><!--fa뒤에 넣으면됨
-       <h2>XE-ICON 이용하기</h2>
-       <a href=""><i class="xi-share-alt-o"></i></a>
-       <a href=""><i class="xi-app"></i></a>
-        <!--FontAwesome 클래스명 :http://fontawesome-->
-    
     <!--컨트럴+/: 각주처리, []: 속성 넣을때 {}:목록 넣을때-->
     <input type="checkbox" id="ck1" class="ck_item">
     <div class="div container">
@@ -93,46 +76,42 @@
             </a>
         </header>
         <main class="contents">
-        <ul class="main_box">
-            <li class="item1">
-                <a href="">
-                    <h3 class="thum_tit_1">청주시청</h3>
-                    <p class="thum_com_1">자연과 문화가 함께하는<br>도시 청주시청입니다.</p>
-                </a>
-            </li>
-            <li class="item2">
-                <a href="">
-                    <h3 class="thum_tit">분야별 정보</h3>
-                     <p class="thum_com">분야별 정보를 공개합니다.</p>
-                </a>
-            </li>
-            <li class="item3">
-                <a href="">
-                    <h3 class="thum_tit">커뮤니티</h3>
-                    <p class="thum_com">시정소식과 주요일정이<br> 궁금하다면?</p>
-                </a>
-            </li>
-        </ul>
-        <h2 class="main_tit">청주시청 미디어</h2>
-        <div class="mv_box">
-            <a href="#video_frame">
-                <img src="./img/main_promo.jpg" alt="메인홍보동영상 캡쳐">
-            </a>
-            <div id="video_frame">
-               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Q5Rfeer9qfQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="contents_frame">
+                    <div class="page" id="page1">
+                    <a href="#page1" class="tb_btn">청주소개</a>
+                       
+                        <div id="content">
+
+	                    <div class="content_wrap">
+
+                            <section class="row" id="contact">
+                                <h2 class="sub_title1">찾아오시는 길</h2>
+                                <article class="full_col h600" style="margin-bottom:50px;">
+                                <!-- API 지도 삽입 --><div id="map_canvas" style="width:300px; height:200px"></div>
+                                </article>
+                            </section>
+
+                        </div>
+                     </div>
+                     <div class="page" id="page2">
+                    <a href="#page2" class="tb_btn">분야별 정보</a>
+                        <div class="tb_data">
+                            <img src="" alt="">
+                        </div>
+                     </div>
+                     <div class="page" id="page3">
+                    <a href="#page3" class="tb_btn">커뮤니티</a>
+                        <div class="tb_data">
+                            <img src="" alt="">
+                        </div>
+                     </div>
             </div>
-<!--
-        <video autopaly>
-            <source src="izwon.mp4" type="video/mpeg">
-            <source src="izwon.webm"type="video/mpeg">
-        </video>
--->
-        </div>
+    
         <footer class="ft">
             <ul class="fnb">
                 <li class="item1"><a href="">이용약관</a></li>
                 <li class="item2"><a href="">개인정보처리방침</a></li>
-                <li class="item3"><a href="c_api.html">찾아오시는길</a></li>
+                <li class="item3"><a href="">찾아오시는길</a></li>
             </ul>
             <p class="copyright">&copy; All copyrights by cheongju</p>
         </footer>
@@ -147,7 +126,7 @@
               
           </div>
           <div class="breadcrumb">
-              Home
+              청주시청
           </div>
            <nav class="gnb">
               <input type="radio" name="rdo" id="ra0" class="ra_item" checked>

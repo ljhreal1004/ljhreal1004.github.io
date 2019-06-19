@@ -1,0 +1,303 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <!--웹표준 구형이 가능한 최신 브라우저로 브라우징할 수 있도록 설정-->
+    <meta http-equiv="X-UA-compatible" content="IE=edge, chrome=1">
+    <!-- 스마트 기기에서 화면의 크기를 물리적 크기에 맞추어 출력-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- 스마트 기기에서 화면을 풀스크린으로 보이기 위한 설정-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!--비ios-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--ios-->
+    <!-- 웹앱 또는 모바일 웹 사이트 등의 사이트 정보를 기록 -->
+    <meta name="title" content="청주시청">
+    <meta name="keywords" contents="청주시청소개, 청주, 분야별 정보">
+    <!--나중에 검색어를 위해 컨텐츠는 검색어 넣어준거임-->
+    <meta name="description" content="즐겁고, 자연이 함께하는 청주">
+    <meta name="author" content="leejoohee">
+    <!--metapho icon의 크기
+        16*16 24*24 32*32(공통) 48*48 64*64 72*72 114*114 128*128 ~512*512
+        png형태 1개 이상
+        ico형태 1개 -->
+    <!-- 파비콘 설정 -->
+    <link rel="icon" href="./img/favicion1.ico">
+    <link rel="shorticon icon" href="./img/favicion1.png" type="image/x-icon">
+    <!-- 플러그인의 연결방식 - CDN, 다운로드 받아 연결 lastest이렇게 밑에 쓴것같이하면 항상 최신버전에 연결되서 사용할수있음-->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="common.css">
+    <title>청주시청</title>
+    <style>
+        .hd {
+            border-bottom: 0;
+        }
+
+        .contents {
+            width: 100%;
+        }
+
+        .contents_frame {
+            width: 100%;
+            height: 100%;
+        }
+
+        .page {
+            width: 100%;
+            padding-top: 0px;
+        }
+
+        .tb_btn {
+            display: block;
+            width: 33.3333%;
+            line-height: 40px;
+            text-align: center;
+            color: #333;
+            font-size: 1.1em;
+            position: absolute;
+            top: 70px;
+            z-index: 50;
+            background: #fff;
+            text-decoration: none;
+            border-bottom: 3px solid #7fbe26;
+        }
+
+        #page1 .tb_btn {
+            left: 0;
+        }
+
+        #page2 .tb_btn {
+            left: 33.3333%;
+        }
+
+        #page3 .tb_btn {
+            left: 66.6666%;
+        }
+
+        .page .tb_data {
+            display: none;
+            margin-top: 80px;
+        }
+
+        .page:target .tb_data {
+            display: block;
+        }
+
+        .page:target .tb_btn {
+            background: #7fbe26;
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 0;
+        }
+
+        .tb_btn:after {
+            content: ".";
+            font-size: 50px;
+            width: 5px;
+            height: 5px;
+            border-radius: 15px;
+            position: absolute;
+            left: 114px;
+            top: -15px;
+            color: #7fbe26;
+        }
+
+        #page3 .tb_btn:after {
+            content: "";
+        }
+
+        #map_canvas {}
+
+        #contact {
+            width: 100%;
+            height: 100%;
+            text-align: left;
+            margin-left: 35px;
+        }
+
+        #contact h2 {
+            padding-top: 80px;
+            font-size: 15px;
+            font-weight: bold;
+            padding-bottom: 20px;
+        }
+        .spot{
+            width: 78%; 
+            margin: 0 auto;
+            margin-bottom: 50px;
+            margin-top: -40px;
+        }
+        .spot h3{
+            font-size: 14px;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+        
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <script>
+        //좌표 값을 바꿔서 입력 36.3491563,127.3776857
+        function initialize() {
+            var myLatlng = new google.maps.LatLng(36.6420474, 127.48882179999998);
+            var mapOptions = {
+                zoom: 17,
+                center: myLatlng
+            }
+            var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: '청주시청' //레이블을 바꿔서 입력
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+
+<body onload="initialize()">
+    <!--컨트럴+/: 각주처리, []: 속성 넣을때 {}:목록 넣을때-->
+    <input type="checkbox" id="ck1" class="ck_item">
+    <div class="div container">
+        <header class="hd">
+            <div class="abs_item">
+                <a href="index.html" class="logo"><img src="./img/logo.jpg" alt="logo"></a>
+            </div>
+            <label for="ck1" class="lst_btn">목록</label>
+            <label for="ck2" class="share_btn">
+                <i class="fab fa-bluetooth-b"></i>
+            </label>
+            <label for="ck3" class="user_btn">
+                <i class="fas fa-search"></i>
+            </label>
+            <a href="login.html" class="search_btn">
+                <i class="fas fa-user"></i>
+            </a>
+        </header>
+        <main class="contents">
+            <div class="contents_frame">
+                <div class="page" id="page1">
+                    <a href="#page1" class="tb_btn">청주소개</a>
+                    <div id="content">
+                        <div class="content_wrap">
+                            <section class="row" id="contact">
+                                <h2 class="sub_title1">찾아오시는 길</h2>
+                                <article class="full_col h600" style="margin-bottom:50px;">
+                                    <!-- API 지도 삽입 -->
+                                    <div id="map_canvas" style="width:300px; height:200px"></div>
+                                </article>
+                                <blank></blank>
+                            </section>
+                        </div>
+                        <div class="spot">
+                            <h3>경부고속도로(청주IC)</h3>
+                            <p>청주IC(청주방향) → 터미널사거리 → 산업단지(공단)육거리 → 충대사거리 → 사창사거리→ 사직사거리 → 상당사거리(좌회전) → 청주시청(좌측)</p>
+                            <h3>중부고속도로(서청주IC)</h3>
+                            <p>서청주IC(좌회전) → 봉명사거리 → 청주예술의전당 → 흥덕대교 → 우암사거리(우회전) → 우암오거리 → 청주시청(우측)</p>
+                            <h3>중부고속도로(오창IC))</h3>
+                            <p>서청주IC(좌회전) → 봉명사거리 → 청주예술의전당 → 흥덕대교 → 우암사거리(우회전) → 우암오거리 → 청주시청(우측)</p>
+                        </div>
+                    </div>
+                    <div class="page" id="page2">
+                        <a href="#page2" class="tb_btn">분야별 정보</a>
+                        <div class="tb_data">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div class="page" id="page3">
+                        <a href="#page3" class="tb_btn">커뮤니티</a>
+                        <div class="tb_data">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="ft">
+                <ul class="fnb">
+                    <li class="item1"><a href="">이용약관</a></li>
+                    <li class="item2"><a href="">개인정보처리방침</a></li>
+                    <li class="item3"><a href="c.api.html">찾아오시는길</a></li>
+                </ul>
+                <p class="copyright">&copy; All copyrights by cheongju</p>
+            </footer>
+        </main>
+
+    </div>
+    <!--    aside.left>nav.gnb>ul>li.dep1.item$*3>label[for=ra1] $가 증가한다는 말임-->
+    <aside class="left" id="collap">
+        <div class="collap_wrap">
+            <label for="ck1" class="close_btn">닫기</label>
+            <div class="log_box">
+
+            </div>
+            <div class="breadcrumb">
+                청주시청
+            </div>
+            <nav class="gnb">
+                <input type="radio" name="rdo" id="ra0" class="ra_item" checked>
+                <ul>
+                    <li class="dep1 item1">
+                        <input type="radio" name="rdo" id="ra1" class="ra_item">
+                        <label for="ra1">청주소개</label>
+                        <ul class="sub">
+                            <li><a href="sub1.html#page1">상징</a></li>
+                            <li><a href="sub1.html#page2">역사기록집</a></li>
+                            <li><a href="sub1.html#page3">교류현황</a></li>
+                        </ul>
+                    </li>
+                    <li class="dep1 item2">
+                        <input type="radio" name="rdo" id="ra2" class="ra_item">
+                        <label for="ra2">분야별 정보</label>
+                        <ul class="sub">
+                            <li><a href="sub1.html#page1">정보공개</a></li>
+                            <li><a href="sub1.html#page2">행정 및 민원</a></li>
+                            <li><a href="sub1.html#page3">세금</a></li>
+                        </ul>
+                    </li>
+                    <li class="dep1 item3">
+                        <input type="radio" name="rdo" id="ra3" class="ra_item">
+                        <label for="ra3">커뮤니티</label>
+                        <ul class="sub">
+                            <li><a href="sub1.html#page1">청주소식</a></li>
+                            <li><a href="sub1.html#page2">주요일정</a></li>
+                            <li><a href="sub1.html#page3">안내서식</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <input type="checkbox" id="ck3" class="ck_item">
+    <div class="sns_frame">
+        <ul class="sns_box">
+            <li class="item1">
+                <a href=""><i class="fab fa-facebook-square"></i></a>
+            </li>
+            <li class="item2">
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="item3">
+                <a href=""><i class="fab fa-blogger"></i></a>
+            </li>
+            <li class="item4">
+                <a href=""><i class="fab fa-twitter-square"></i></a>
+            </li>
+        </ul>
+        <label for="ck3" class="ck3_close"></label>
+    </div>
+    <input type="checkbox" id="ck2" class="ck_item">
+    <div class="order_frame">
+        <div class="order_box">
+            <!--            <img src="" alt="">-->
+        </div>
+        <label for="ck2" class="ck3_close"></label>
+    </div>
+</body></html>
