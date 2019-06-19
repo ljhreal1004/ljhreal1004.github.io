@@ -27,7 +27,7 @@
         .1st_btn{background-image: url(./images/m_lst_btn.png); background-size: cover; background-repeat: no-repeat; width: 32px; height: 32px; position: absolute; z-index: 80; left: 20px; top: 20px;}
         .close_btn{background-image: url(./images/m_close_btn.png);background-size: cover; background-repeat: no-repeat; width: 32px; height: 32px; position: absolute; z-index: 80; right: 20px; top: 20px;}
         .search{position: fixed; z-index: 90; width: 100vw; height: 100vh; background-color: #fff; margin-top: 0; right: -100%; transition: 0.8s; }
-        .mobile.search_btn{background-image: url(./images/m_search_btn.png); background-size: cover; width: 32px; background-position: center center; height: 32px; position: absolute; z-index: 80; right: 20px; top: 15px;}
+        .mobile.search_btn{background-image: url(./images/m_search_btn.png); background-size: cover; width: 24px; background-position: center center; height: 24px; position: absolute; z-index: 80; right: 20px; top: 15px;}
         .input_data, .sub_btn{display: block; width: 120px; line-height: 30px; margin-left: 50px; text-align: center; color: #333; border: 1px solid #333; float: left; margin-top: 15px;}
         
     #tnb { position:absolute; z-index:50; width:190px; right:5%; top:12%; }    
@@ -145,6 +145,42 @@
     </script>
 </head>
 <body>
+   <nav id="tnb">
+            <ul class="mn">
+                <li class="item1">
+                    <a href="" class="dp1">KO</a>
+                    <ul class="col_sub">
+                        <li class="it1"><a href="index.html">KO</a></li>
+                        <li class="it2"><a href="index_en.html">EN</a></li>
+                        <li class="it3"><a href="index_cn.html">CN</a></li>
+                    </ul>
+                </li>
+                <li class="item2"><a href="product.html" class="search_btn"></a></li>
+            </ul>
+        </nav>
+        <ul class="vs_btn_box desk">
+            <li class="item1"><button class="on">01</button></li>
+            <li class="divider"></li>
+            <li class="item2"><button>02</button></li>
+        </ul>
+        <nav class="mobile search">
+            <h3 class="mob_title1">SEARCH</h3>
+            <form action="">
+                <input type="text" id="keywords" class="input_data">
+                <input type="submit" id="sub_btn" class="sub_btn">
+            </form>
+            <h4 class="mob_title2">주요 검색어</h4>
+            <ul class="mob_menu">
+                <li class="item1"><a href="">도라에몽</a></li>
+                <li class="item2"><a href="">미니언즈</a></li>
+                <li class="item3"><a href="">클로바 미니</a></li>
+                <li class="item4"><a href="">스마트 스피커</a></li>
+                <li class="item5"><a href="">유인나 목소리</a></li>
+            </ul>
+            <label for="search_ck" class="close_btn"></label>
+        </nav>
+        <label for="lst_ck" class="mobile lst_btn"></label>
+        <label for="search_ck" class="mobile search_btn"></label>
     <input type="checkbox" class="ck_item" id="lst_ck">
     <input type="checkbox" class="ck_item" id="search_ck">
     <header class="page hd" id="main">
