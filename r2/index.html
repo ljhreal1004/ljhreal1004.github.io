@@ -13,7 +13,7 @@
     .ck_item, .ra_item { display:none; }
     .hd { position:relative; }  
         #main{background-color: #000;}
-    #main video{margin-left: 350px; }
+    #main video{position: relative; left: 350px; top: -120px;}
     .logo { display:block; width: 152px; height: 32px; 
         background-image:url("./images/logo-wh.png") ; 
         background-repeat:no-repeat; background-size: 145px auto; 
@@ -24,11 +24,25 @@
     #gnb li a { font-size:1.3em; color:#fff; font-weight:bold; }  
     #gnb li a:hover { text-decoration:underline; color:#2c8; }
     .mob_title1{text-align: center; border-bottom: 2px solid #ccc;}
-        .1st_btn{background-image: url(./images/m_lst_btn.png); background-size: cover; background-repeat: no-repeat; width: 32px; height: 32px; position: absolute; z-index: 80; left: 20px; top: 20px;}
-        .close_btn{background-image: url(./images/m_close_btn.png);background-size: cover; background-repeat: no-repeat; width: 32px; height: 32px; position: absolute; z-index: 80; right: 20px; top: 20px;}
-        .search{position: fixed; z-index: 90; width: 100vw; height: 100vh; background-color: #fff; margin-top: 0; right: -100%; transition: 0.8s; }
-        .mobile.search_btn{background-image: url(./images/m_search_btn.png); background-size: cover; width: 24px; background-position: center center; height: 24px; position: absolute; z-index: 80; right: 20px; top: 15px;}
-        .input_data, .sub_btn{display: block; width: 120px; line-height: 30px; margin-left: 50px; text-align: center; color: #333; border: 1px solid #333; float: left; margin-top: 15px;}
+    .lst_btn { background-image:url("./images/m_lst_btn.png"); 
+    background-size:cover; background-repeat:no-repeat; width:20px; 
+    height:20px; position:absolute; z-index:80; left:20px; top:20px; } 
+    .close_btn { background-image:url("./images/m_close_btn.png"); 
+    background-size:cover; background-repeat:no-repeat; width:20px; 
+    height:20px; position:absolute; z-index:80; right:20px; top:25px; }  
+    .search { position:fixed; z-index:90; width:100vw; height:100vh; 
+    background-color:#fff; margin-top:0; right:-100%; transition:0.8s; }    
+    .mobile.search_btn { background-image:url("./images/m_search_btn.png"); 
+    background-size:cover; background-repeat:no-repeat; width:20px; 
+    background-position:center center;  
+    height:20px; position:absolute; z-index:80; right:20px; top:15px; }
+    .input_data, .sub_btn { display:block; width:120px; line-height:30px; margin-left:50px; text-align:center; color:#333; border:1px solid #333; float:left;
+    margin-top:15px; } 
+.sub_btn { margin-left:5px; background:#333; border-radius:24px; color:#fff; } 
+.mob_title2 { clear:both; font-size:0.95em; padding-left:3em; line-height:2; padding-top:2.8em;  }
+.mob_menu { clear:both; margin-top:20px; }    
+.mob_menu li { line-height:2.4; }    
+.mob_menu li a { color:#333; font-size:1.1em; display:block; }    
         
     #tnb { position:absolute; z-index:50; width:190px; right:5%; top:12%; }    
     #tnb li { float:left; position:relative; line-height:32px; width:70px; }
@@ -145,7 +159,21 @@
     </script>
 </head>
 <body>
-   <nav id="tnb">
+  <input type="checkbox" class="ck_item" id="lst_ck">
+    <input type="checkbox" class="ck_item" id="search_ck">
+    <header class="page hd" id="main">
+        <a href="index.html" class="logo"></a>
+        <nav id="gnb">
+            <h3 class="mobile mob_title1">MENU</h3>
+            <ul class="mn">
+                <li class="item1"><a href="new.html">NEW</a></li>
+                <li class="item2"><a href="brand.html">BRAND</a></li>
+                <li class="item3"><a href="product.html">PRODUCT</a></li>
+                <li class="item4"><a href="store.html">STORE</a></li>
+            </ul>
+            <label for="lst_ck" class="mobile close_btn"></label>
+        </nav>
+        <nav id="tnb">
             <ul class="mn">
                 <li class="item1">
                     <a href="" class="dp1">KO</a>
@@ -181,9 +209,6 @@
         </nav>
         <label for="lst_ck" class="mobile lst_btn"></label>
         <label for="search_ck" class="mobile search_btn"></label>
-    <input type="checkbox" class="ck_item" id="lst_ck">
-    <input type="checkbox" class="ck_item" id="search_ck">
-    <header class="page hd" id="main">
        <video poster="./images/thumb.JPG" id="vdo1" autoplay loop muted width="1220px" height="1024px" src="./images/Makingfilm.mp4">
         </video>
         <a href="index.html" class="logo"></a>
