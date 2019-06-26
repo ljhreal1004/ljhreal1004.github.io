@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MUSIC IS MY LIFE</title>
+</head>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script>
+    $(document).ready(function(){
+    $(".lst").click(function(){
+        $(".collap").addClass("on");
+        $(".wrap").addClass("on");
+    });
+    $(".close").click(function(){
+        $(".collap").removeClass("on"); 
+        $(".wrap").removeClass("on"); 
+    });
+    });
+</script>
+<style>
+    *{padding: 0; margin: 0;position: relative;}
+    a{text-decoration: none;}
+    ul li{list-style: none;}
+    
+    body{width: 2560px; height: 1440px;}
+    /* common collapible style -> collapse.css */  
+    .collap { width: 100%; height: 100%; position:fixed; top:0; left:-110%; z-index:999; background:#fff; transition:0.5s; }
+    .collap.on { left: 0; }    
+    .c_logo { width:90px; height:auto; margin-left: 20px; margin-top: 15px; float:left; }  
+    .c_logo img { display:block; width: 100%; height:auto; }
+    .close { width:20px; height:20px; float:left; position: absolute; top: 590px; left: 85px; background-image:url("./images/close_btn.png"); background-size:100% 100%; }   
+    .gnb { clear: both; padding-top:285px; padding-left: 300px;; width: 100%; }  
+    .gnb li { line-height:100px; padding: 10px; } 
+    .gnb li a { display:block; font-size:2.0em; font-weight: bold; 
+        text-indent:15px; color: #000;  }  
+    .wrap { margin-left:0; width:100%; transition:0.5s; }    
+    .wrap.on { margin-left:110%; } 
+    
+    .lst { width:209px; height:1440px; background-color:#000; 
+    background-image:url("./images/menu.jpg"); background-position:center center; background-repeat: no-repeat; background-size:20px auto;float:left;}
+    .logo{position: absolute; top: 68px; left: 66px;}
+    .menu_icon{position: absolute; top: 697px; left: 97px;}
+    .contents{float: left;}
+</style>
+<body>
+   <div class="collap">
+    <div class="c_logo">
+    </div>
+    <div class="close"></div>
+    <nav class="gnb">
+        <ul class="menu">
+            <li class="item1"><a href="sub1.html">인기차트</a></li>
+            <li class="item2"><a href="sub2.html">최신차트</a></li>
+            <li class="item3"><a href="sub3.html">나의뮤직</a></li>
+            <li class="item4"><a href="sub4.html">DJ</a></li>
+            <li class="item5"><a href="sub5.html">매거진</a></li>
+        </ul>
+    </nav>
+    </div>
+    <div class="wrap">
+        <header class="hd">
+           <div class="lst"></div>
+            <a class="logo" href="index.html"><img src="./images/main_logo.jpg" alt="로고"></a>
+        </header>
+        <div class="contents">
+            <img src="./images/main.jpg" alt="메인컨텐츠이미지">
+        </div>
+    </div>
+</body>
+</html>
