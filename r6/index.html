@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <title>KT5G</title>
+    <meta name="description" content="malang-malang flatform">
+    <meta name="keywords" content="어디든 가고, 무엇이든 볼 수 있고 세상을 내 마음껏 가지고 노는 당신의 초능력">
+    <meta property="og:title" content="KT5G">
+    <meta property="og:type" content="service site">
+    <meta property="og:site_name" content="KT5G">
+    <meta property="og:description" content="어디든 가고, 무엇이든 볼 수 있고 세상을 내 마음껏 가지고 노는 당신의 초능력">
+    <meta property="og:url" content="https://5g.kt.com/main5g.do">
+    <meta property="og:image" content="./data/opengraph.png">
+    <link rel="shortcut icon" type="image/x-icon" href="./data/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="media.css">
+    <style>
+    /* 내부 스타일 지정 */    
+    </style>
+    <script src="vs.js"></script>
+    <script src="ico_box.js"></script>
+    <script src="notice.js"></script>
+    <script src="asset_tab.js"></script>
+    <script src="main_nav.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="tnb_wrap">
+        <div class="lst_btn mobile">
+            <i class="xi-bars"></i>
+        </div>
+        <a href="" class="logo">
+            <img src="./images/logo.png" alt="로고">
+        </a>
+        <div class="log_fr">
+            <p class="desk">아직 회원이 아니세요?</p>
+            <button class="ex_menu_btn">
+                로그인
+            </button>
+            <button class="log_btn">
+                <img src="./images/my_icon.png" alt="마이">
+            </button>
+        </div>
+    </div>
+    <nav class="gnb_wrap">
+        <ul class="gnb">
+            <li class="item1"><a href="">쇼핑하기</a></li>
+            <li class="item2"><a href="">알아보기</a></li>
+            <li class="item3"><a href="">5시 핫딜</a></li>
+        </ul>
+        <button class="close_btn mobile">
+            <i class="xi-close"></i>
+        </button>
+    </nav>
+</header>
+<main class="content">
+    <div class="cyan_data">
+        <div class="con_wrap">
+            <figure id="visual" class="col8">
+                <ul class="pic_box">
+                    <li class="item1">
+                        <a href="">
+                            <img src="./images/sl1.jpg" alt="super VR">
+                        </a>
+                    </li>
+                    <li class="item2">
+                        <a href="">
+                            <img src="./images/sl2.jpg" alt="캐치히어로즈2">
+                        </a>
+                    </li>
+                    <li class="item3">
+                        <a href="">
+                            <img src="./images/sl3.jpg" alt="웹으로 부활한 추억의 게임, 말랑말랑 산성비">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="vs_btn_box">
+                    <li class="item1"><button class="on"></button></li>
+                    <li class="item2"><button></button></li>
+                    <li class="item3"><button></button></li>
+                </ul>
+            </figure>
+            <figure id="ico_slider" class="col4">
+                <div class="ico_btn_fr">
+                    <h2 class="ico_slider_tit">KT 5G 슈퍼플랜 요금제</h2>
+                </div>
+                <ul class="ico_box">
+                    <li class="item1 data">
+                        <ul class="ico_fr">
+                            <li class="rw1">
+                                <img src="./images/icon-charge1.png" alt="데이터1" class="ico">
+                                <p class="ico_com">5G속도로</p>
+                                <h3 class="ico_tit">데이터무제한 사용</h3>
+                            </li>
+                            <li class="rw2">
+                                <img src="./images/icon-charge2.png" alt="데이터2" class="ico">
+                                <p class="ico_com">해외에서</p>
+                                <h3 class="ico_tit">데이터로밍 무료</h3>
+                            </li>
+                            <li class="rw3">
+                                <img src="./images/icon-charge3.png" alt="데이터3" class="ico">
+                                <p class="ico_com">VIP 이상의</p>
+                                <h3 class="ico_tit">멤버십 혜택 제공</h3>
+                            </li>
+                            <li class="rw4">
+                                <img src="./images/icon-charge4.png" alt="데이터4" class="ico">
+                                <p class="ico_com">스마트기기 요금</p>
+                                <h3 class="ico_tit">최대 1대 무료</h3>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </figure>
+        </div>
+    </div>
+    <div class="wt_data">
+        <div class="con_wrap2">
+            <div id="notice" class="col8">
+                <ul class="notice_box">
+                    <li><a href=""><span class="ht">[공지]</span>새로운 말랑말랑플랫폼 서비스를 소개합니다.</a></li>
+                    <li><a href=""><span class="ht">[이벤트]</span>말랑말랑플랫폼 개장 이벤트</a></li>
+                    <li><a href=""><span class="ht">[공지]</span>플랫폼 서비스 테스터를 모집하니다.</a></li>
+                    <li><a href=""><span class="ht">[공지]</span>플랫폼 설문조사를 진행합니다.</a></li>
+                    <li><a href=""><span class="ht">[공지]</span>플랫폼에 대한 모니터링 요원을 모집합니다.</a></li>
+                </ul>
+            </div>
+            <div id="ban_box" class="col4">
+                <a href="">
+                    <img src="./images/tit-cgrt.jpg" alt="오늘의 운세" class="ban_pic">
+                </a>
+            </div>
+        </div>
+        <div class="con_wrap2">
+            <ul id="card_lst">
+                <li class="card col4">
+                    <a href="">
+                        <h2 class="card_top">기다리지 않고</h2>
+                        <img src="./images/bg-intro1.png" alt="고양이1" class="card_pic">
+                        <h3 class="card_tit new">LTE보다 20배 빠른 전송속도</h3>
+                        <p class="card_com">대용량 영화를 0.8초만에 원하는 순간에 원하는 영화를 즐기세요.</p>
+                    </a>       
+                </li>
+                <li class="card col4">
+                    <a href="">
+                        <h2 class="card_top">더 실감나게</h2>
+                        <img src="./images/bg-intro2.png" alt="고양이2" class="card_pic">
+                        <h3 class="card_tit new">LTE보다 10배 빠른 반응속도</h3>
+                        <p class="card_com">어디서나 실시간으로 실감나는 콘서트를 즐길 수 있어요.</p>
+                    </a>    
+                </li>
+                <li class="card col4">
+                    <a href="">
+                       <h2 class="card_top">더 많이 연결하는 5G</h2>
+                        <img src="./images/bg-intro3.png" alt="고양이3" class="card_pic">
+                        <h3 class="card_tit new">LTE보다 10배 많은 기기와 속도 연결</h3>
+                        <p class="card_com">좋아하는 게임을 더 많은 사람들과 동시에 즐길 수 있어요.</p>
+                    </a>       
+                </li>
+            </ul>
+        </div>
+        <div class="con_wrap2" style="padding-top:5px">
+            <section class="tb_item_box">
+                <div class="asset_tit_box">
+                    <h3 class="asset_tit on" data-val="1">5G 서비스</h3>                   
+                </div>
+                <div class="asset_ban_box">
+                    <div class="asset_ban on" data-val="1">
+                        <img src="./images/tit_img.jpg" alt="합리적인 가격" class="asset_ban_img" data-val="1">
+                    </div>
+                    <div class="asset_ban">
+                        <img src="./data/tit_img2.png" alt="타자연습만 해도" class="asset_ban_img" data-val="2">
+                        <h3 class="asset_ban_tit">"타자연습만 해도 사이버 외교관" 
+                        설치없이 웹으로,
+                        역사 교육도 한컴 타자연습!</h3>
+                    </div>
+                </div>
+                <div class="asset_con_box">
+                    <ul class="asset_row on" data-val="1">
+                        <li class="span2">
+                            <a href="">
+                                <img src="./images/src1.jpg" alt="한컴스페이스" class="item_pic">
+                                <h4 class="item_tit">Narle(나를)</h4> 
+                                <p class="item_com">내 모습을 마음대로 <br>
+                                바꾸는 초능력</p>
+                            </a>
+                        </li>
+                        <li class="span2">
+                            <a href="">
+                                <img src="./images/src2.jpg" alt="웹 한글 뷰어" class="item_pic">
+                                <h4 class="item_tit">리얼 360</h4> 
+                                <p class="item_com">360도로 세상을 돌려보는 초능력</p>
+                            </a>
+                        </li>
+                        <li class="span2">
+                            <a href="">
+                                <img src="./images/src3.jpg" alt="한컴 애셋" class="item_pic">
+                                <h4 class="item_tit">e-스포츠 라이브</h4> 
+                                <p class="item_com">보고 싶은 게임 화면을<br>골라보는 초능력</p>
+                            </a>   
+                        </li>       
+                        <li class="span2">
+                            <a href="">
+                                <img src="./images/src4.jpg" alt="지니톡" class="item_pic">
+                                <h4 class="item_tit">스트리밍 게임</h4> 
+                                <p class="item_com">클릭만으로 게임이 바로<br>실행되는 초능력</p>
+                            </a>    
+                        </li>
+                        <li class="span2">
+                            <a href="">
+                                <img src="./images/src5.jpg" alt="문서병합" class="item_pic">
+                                <h4 class="item_tit">프로야구 Live</h4> 
+                                <p class="item_com">직관보다 더 실감나게 <br>야구를 즐기는 초능력</p>
+                            </a>    
+                        </li>
+                        <li class="span2">
+                            <a href="">
+                                <img src="./images/src6.jpg" alt="문서변환" class="item_pic">
+                                <h4 class="item_tit">뮤지션 Live</h4> 
+                                <p class="item_com">최애 뮤지션이 내 눈 앞에 나타나는 초능력</p>
+                            </a>    
+                        </li>
+                        <li class="span2">
+                            <a href="">
+                                <img src="./images/src7.jpg" alt="오피스 꿀단지" class="item_pic">
+
+                                <h4 class="item_tit">리얼 지니팩</h4> 
+                                <p class="item_com">원음 그대로 생생한 사운드를<br>듣는 초능력</p>
+                            </a>    
+                        </li>
+                        <li class="span2">
+                            <a href="">
+                                <img src="./images/src8.jpg" alt="웹수식편집기" class="item_pic">
+                                <h4 class="item_tit">GIGA Live TV</h4> 
+                                <p class="item_com">새로운 세상으로 빠져드는 초능력</p>
+                            </a>    
+                        </li>
+                        <li class="span2">
+                            <a href="">                           
+                                <img src="./images/src9.jpg" alt="3줄 요약" class="item_pic">
+                                <h4 class="item_tit">데이터 공유</h4> 
+                                <p class="item_com">누구에게도 줄 수 있는 데이터 최대 100GB</p>
+                            </a>    
+                        </li>
+                        <li class="span2">
+                            <a href="">
+                                <img src="./images/src10.jpg" alt="톡카페" class="item_pic">
+                                <h4 class="item_tit">데이터 로밍</h4> 
+                                <p class="item_com">해외에서 자유로운 데이터로밍 무료</p>
+                            </a>    
+                        </li>
+                    </ul>
+                    <ul class="asset_row" data-val="2">
+                        <li class="span2">
+                            <a href="">
+                                <img src="./data/src21.svg" alt="한컴 타자연습" class="item_pic">
+                                <h4 class="item_tit">한컴 타자연습</h4>
+                                <p class="item_com">게임으로 즐기는 새로운 타자 연습!</p>
+                            </a>    
+                        </li>
+                        <li class="span2">
+                            <a href="">
+                                <img src="./data/src22.png" alt="말랑말랑 산성비" class="item_pic">
+                                <h4 class="item_tit">말랑말랑 산성비</h4>
+                                <p class="item_com">웹으로 돌아왔다!
+                                        추억의 타자 게임 산성비</p>
+                            </a>            
+                        </li>
+                        <li class="span2">
+                            <a href="">
+                               <img src="./data/src23.svg" alt="나만의 DIY 카드만들기" class="item_pic">
+                               <h4 class="item_tit">나만의 DIY 카드만들기</h4>
+                               <p class="item_com">내가 만든 카드에 마음을 담아
+                               전달해 보세요</p>
+                            </a>   
+                        </li>
+                        <li class="span2">
+                            <a href="">  
+                               <img src="./data/src24.svg" alt="오늘의 칵테일" class="item_pic">
+                               <h4 class="item_tit">오늘의 칵테일</h4>
+                               <p class="item_com">기분에 따라 만드는 칵테일 레시피</p>
+                            </a>   
+                        </li>
+                        <li class="span2">
+                            <a href="">
+                               <img src="./data/src25.svg" alt="스페이스 가로세로" class="item_pic">
+                               <h4 class="item_tit">스페이스 가로세로</h4>
+                               <p class="item_com">우주에서 펼쳐지는 가로세로 퀴~즈</p>
+                            </a>   
+                        </li>
+                        <li class="span2">
+                            <a href="">
+                               <img src="./data/src26.png" alt="부자가 되는 이유" class="item_pic">
+                               <h4 class="item_tit">당신이 부자가 되는 이유</h4>
+                               <p class="item_com">당신의 성공 비결은 무엇일까요
+                               지금 확인해 보세요</p>
+                            </a>   
+                        </li>
+                        <li class="span2">
+                            <a href="">  
+                               <img src="./data/src27.png" alt="인디 게임" class="item_pic">
+                               <h4 class="item_tit">인디 게임</h4>
+                               <p class="item_com">학생들이 직접만든 다양한 게임을 즐겨보세요</p>
+                            </a>   
+                        </li>
+                        <li class="span2">
+                            <a href="">
+                               <img src="./data/src28.svg" alt="맞춤법 게임" class="item_pic">
+                               <h4 class="item_tit">맞춤법 게임</h4>
+                               <p class="item_com">게임으로 공부하는 맞춤법</p>
+                            </a>   
+                        </li>
+                        <li class="span2">
+                            <a href="">
+                               <img src="./data/src29.svg" alt="오늘의 운세" class="item_pic">
+                               <h4 class="item_tit">오늘의 운세</h4>
+                               <p class="item_com">오늘은 나에게 무슨 일이?
+                                미리 확인해 보세요</p>
+                            </a>    
+                        </li>
+                        <li class="span2">
+                            <a href="">
+                               <img src="./data/src30.png" alt="띠별 운세" class="item_pic">
+                               <h4 class="item_tit">띠별 운세</h4>
+                               <p class="item_com">이것만 알면 폭망할 일 없어요!
+                               띠별로 보는 폭망을 피하는 오늘의 운세</p>
+                            </a>                               
+                        </li>
+                    </ul>
+                </div>
+            </section>    
+        </div>    
+    </div>
+    <footer class="footer">
+        <div class="ft_wrap">
+            <nav id="fnb">
+                <ul class="fmenu">
+                    <li class="item1"><a href="">회사소개</a></li>
+                    <li class="item2"><a href="">이용약관</a></li>
+                    <li class="item3"><a href="">멤버십 회원약관</a></li>
+                    <li class="item4"><a href="">법적조치</a></li>
+                    <li class="item5"><a href="">개인정보처리방침</a></li>
+                    <li class="item6"><a href="">이메일 무단수집 거부</a></li>
+                    <li class="item7"><a href="">명의도용 방지 서비스</a></li>
+                </ul>
+            </nav>
+            <div id="sel_box">
+                <details id="rel_site">
+                    <summary>FAMILY SITE</summary>                
+                    <ul class="sel_lst">
+                        <li class="it1"><a href="https://www.hancomgroup.com/">KT 개인</a></li>
+                        <li class="it2"><a href="https://www.hancom.com/">KT 기업</a></li>
+                        <li class="it3"><a href="http://www.hancommds.com/">KT 회사소개 국문</a></li>
+                        <li class="it4"><a href="https://www.hsecure.co.kr/">KT 회사소개 영문</a></li>
+                    </ul>
+                </details>
+            </div>
+            <p class="copyright">
+                <span class="copy_r">No.1 통신전문 쇼핑몰 KT 5G
+                    <span class="copy_in">(주)케이티 대표이사 황창규 경기도 성남시 분당구 불정로 90 (정자동) 사업자등록번호 : 102-81-42945 통신판매업신고 : 2002-경기성남-0048 사업자정보확인<br>KT 5G는 KT 이니시스의 구매안전서비스를 통하여 고객님이 현금 등으로 결제하신 금액에 대해 안전거래를 보장하고 있습니다. 서비스가입 사실 확인</span>
+                </span>
+                <span class="copy_r">KT 5G 고객센터(핸드폰 구매) : 
+                    <span class="copy_in">1588-8001(유료), 080-515-9000(무료)  전화 전 클릭 법인 다회선 모바일 개통 상담  신청하기 ><br>평일 09시~18시(핸드폰 상담은 21시까지), 토요일 10시~18시  ktshop@kt.com</span>
+                </span>
+                <span class="copy_r">5시 핫딜 고객센터 :
+                    <span class="copy_in">080-515-9004</span>
+                </span>
+                <span class="copy_r">KT 고객센터 :
+                    <span class="copy_in">[모바일] 휴대폰+114(무료), 1588-0010(유료) [인터넷/TV/전화] 유선전화(국번없이) 100, 휴대폰(지역번호)+100</span>
+                </span>
+            </p>
+        </div>
+    </footer>
+</main>    
+</body>
+</html>
