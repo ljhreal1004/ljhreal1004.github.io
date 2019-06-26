@@ -1,0 +1,18 @@
+// JavaScript Document
+
+$(document).ready(function(){
+	$(".drop_menu").hide();	//드롭다운메뉴 숨김처리
+	
+	$(".nav a").hover(function(){
+		$(this).addClass("active");
+	},function(){
+		$(this).removeClass("active");	
+	});
+	$(".nav a, .drop_menu").hover(function(){
+		$(".drop_menu").stop().slideToggle("slow");	
+		$(this).addClass("active");
+	},function(){
+		$(this).removeClass("active");	
+	});
+	
+});
