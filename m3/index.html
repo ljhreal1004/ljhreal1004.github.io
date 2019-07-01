@@ -22,7 +22,7 @@
     .gnb { clear: both; padding-top:35px; width: 100%; border-top: 1px solid #ccc; top: 20px; } .search{width: 19px; height: 20px; background-image: url(./img/b_search_btn.png); position: absolute; left: 310px; top: 24px;} 
     .gnb li { line-height:40px; padding: 10px; } 
     .gnb li a { display:block; font-size:1.6em; text-indent:15px; }
-    .item { font-size: 20px; font-weight: bold; color: #ee3127; margin-left: 20px; transition: 2s ease-in-out;}
+    .item { font-size: 20px; font-weight: bold; color: #000; margin-left: 20px; transition: 2s ease-in-out; padding-top: 10px;}
     .sub_item{ font-size: 11px; font-weight: lighter; display: none; transition: 0.8;}
     .sub_item a{color: #000;}
     .wrap { margin-top:0; width:100%; transition:0.5s; }    
@@ -164,25 +164,6 @@ $(document).ready(function(){
         clearInterval(intv);
         prevAni(); 
         intv=setInterval(function(){ nextAni(); }, 2900);
-    });
-    $(".item1").click(function(){
-        $(".item1").addClass("on");
-        $("..sub_item1").addClass("on");
-    });
-    $(".item2").click(function(){
-       $(".sub_item2").css("display","block");
-    });
-    $(".item3").click(function(){
-       $(".sub_item3").css("display","block");
-    });
-    $(".item4").click(function(){
-       $(".sub_item4").css("display","block");
-    });
-    $(".item5").click(function(){
-       $(".sub_item5").css("display","block");
-    });
-    $(".item6").click(function(){
-       $(".sub_item6").css("display","block");
     });
 });
 </script>
