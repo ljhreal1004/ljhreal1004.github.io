@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./img/favicion.png"/>
+    <link rel="stylesheet" href="font.css">
+    <title>우정사업본부</title>
+</head>
+<style>
+    *{margin: 0; padding: 0; position: relative;}
+    body {font-family: 'NanumBarunGothic', 'serif';}
+    a{text-decoration: none; color: #000;}
+    ul li{list-style: none;}
+    
+    /*collapse 영역*/
+    .collapse{display: none;}
+
+    /*hd영역*/
+    .hd{width: 100%; height: 640px; background-image: url(./img/vs_bg.jpg);}
+    .tnb{width: 100%; height: 65px; border-bottom: 0.25px solid #fff;}
+    .lst_btn{float: left; position: absolute; top: 23px; left: 17px;}
+    .logo{display: block; float: left; position: absolute; top: 17px; left: 102px;}
+    .logo img{width: 133px;}
+    .search_btn{float: left; position: absolute; top: 22px; left: 312px;}
+    .visual{clear: both;}
+    .icon_box{background-color: #fff; opacity: 0.78; width: 233px; height: 233px; position: absolute; top: 275px; left: 63px;}
+    .icon_box li{float: left; width: 70px; height: 70px;}
+    .icon_box span{font-size: 13px; }
+    
+    /*page 영역*/
+    .page{width: 100%;}
+    #page1{width: 85%; height: 440px; padding-top:63px; margin: 0 auto; }
+    .p_index:before{content: ""; display: block; width: 53px; height: 1px; background-color: #1b1b1b;}
+    .p_index{font-size: 12.8px; padding-top: 9px; padding-bottom: 16px;}
+    .p_tit{font-size: 24px; letter-spacing:25%; padding-bottom: 27px; font-weight: 400;}
+    
+    #page2{width: 100%; margin: 0 auto; background-color: #fef6f1; }
+    #page2_wrap{width: 85%; margin: 0 auto;}
+    
+    .page4_wrap{width: 100%; height: 460px; background-color: #fef6f1; padding-top: 40px;}
+    #page4{width: 85%; margin: 0 auto;}
+    .p_box{float: left;}
+    .b_btn{width: 159px; height: 65px; background-image: url(./img/ban_btn.jpg); float:right;}
+    .ban_box{overflow: hidden; width: 300%;}
+    .ban_box li{float: left; padding-left: 20px;}
+    
+    
+    #page5{clear: both; width: 100%; height: 420px; overflow: hidden;}
+    .group{width: 85%; margin: 0 auto; margin-top: 100px; border: 1px solid #e5e5e5; border-collapse: collapse;}
+    .group tr th{width: 82px; height: 59px; border-bottom: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5;}
+    .g_box{background-color: #fef6f1;}
+    .group tr th.g_tit{font-size:22px; border-bottom: none;}
+    .g_txt p{font-size:14px; border: 1px solid #d85026; background-color: #fb6c40; width: 73px; height: 30px; margin: 0 auto; color: #fff; line-height: 30px;}
+    
+    .ser1{border-bottom: 1px solid #e5e5e5; padding-bottom: 25px;}
+    .ser1 ul li, .ser2 ul li{float: left; padding-left: 23px; font-size:15px;padding-bottom: 12px;}
+    .ser1 ul li:first-child, .ser2 ul li:first-child{padding-left: 0px;}
+    .ser2 .p_tit{padding-top: 30px;}
+    .r_num{clear: left; color: #f34f31; font-weight: bold; font-size: 14px;}
+    .ser2 .r_num{line-height: 22px;}
+    .page3_wrap{width: 100%;  background-color: #fff;}
+    #page3{width: 85%; margin: 0 auto; }
+    .news_box1, .news_box2{width: 100%; border: 1px solid #e5e5e5;border-collapse: collapse;}
+    .news_box1 .date, .news_box2 .date{border: 1px solid #e5e5e5; border-collapse: collapse; width: 106px; height: 35px; color:#f34f31; font-size: 13px;}
+    .news_tit{font-size: 16px; font-weight: bold;}
+
+    
+    /*ft 영역*/
+    .ft{background-color: #464646; width: 100%; height: 275px;}
+    .ft p{color: #fff; font-size: 12px;}
+    .ft .address{padding-bottom: 24px;}
+    .ft_black{width: 85%; margin: 0 auto;}
+</style>
+<body>
+   <div class="collapse">
+       <img src="./img/lst_btn.png" alt="메뉴버튼">
+   </div>
+    <div class="wrap">
+        <div class="hd">
+            <nav class="tnb">
+               <img class="lst_btn" src="./img/lst_btn.png" alt="메뉴버튼">
+                <a href="index.html" class="logo">
+                    <img src="./img/logo_w.png" alt="로고화이트">
+                </a>
+                <img class="search_btn" src="./img/search_btn.png" alt="돋보기버튼">
+            </nav>
+            <div class="visual">
+                <h2><h2 class="v_bold">믿음</h2>과 함께<br>
+                    <h2 class="v_bold">미래</h2>로 나아가는 정부기업</h2>
+                <ul class="icon_box">
+                    <li>
+                        <a href="./delivery.html">
+                        <img src="./img/b_icon1.png" alt="아이콘1">
+                        <span>배달사전안내</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./delivery.html">
+                        <img src="./img/b_icon2.png" alt="아이콘2">
+                        <span>우편번호검색</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./delivery.html">
+                        <img src="./img/b_icon3.png" alt="아이콘3">
+                        <span>배송조회</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./delivery.html">
+                        <img src="./img/b_icon4.png" alt="아이콘4">
+                        <span>우체국찾기</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page">
+            <div class="page" id="page1">
+                <h5 class="p_index">Service</h5>
+                <div class="ser1">
+                    <h3 class="p_tit">우편서비스</h3>
+                    <ul>
+                        <li><a href="#">우편</a></li>
+                        <li><a href="#">쇼핑</a></li>
+                        <li><a href="#">택배</a></li>
+                        <li><a href="#">알뜰폰</a></li>
+                    </ul>
+                    <p class="r_num"><img src="./img/phone_icon.png" alt="전화아이콘">1588-1300</p>
+                </div>
+                <div class="ser2">
+                    <h3 class="p_tit">금융서비스</h3>
+                    <ul>
+                        <li><a href="#">예금</a></li>
+                        <li><a href="#">보험</a></li>
+                        <li><a href="#">카드</a></li>
+                        <li><a href="#">펀드</a></li>
+                    </ul>
+                    <p class="r_num">예금 1599-1900, 1588-1900
+                    <br>보험 1599-0100
+                    </p>        
+                </div>
+            </div>
+            <div class="page" id="page2">
+               <div id="page2_wrap">
+                    <h5 class="p_index">Notice</h5>
+                    <div class="n_box">
+                        <div class="notice">공지
+                            <ul>
+                                <li class="n_box_text"><a href="#">가수 백설희· 현인 우표에 담는다</a></li>
+                                <li class="n_box_date"><a href="#">2019-06-21</a></li>
+                                <li class="n_box_text"><a href="#">우체국, 한국산업인력공단과 외국인근로자... </a></li>
+                                <li class="n_box_date"><a href="#">2019-06-14</a></li>
+                                <li class="n_box_text"><a href="#">우체국예금보험 어린이 그림그리기 대회...</a></li>
+                                <li class="n_box_date"><a href="#">2019-06-14</a></li>
+                                <li class="n_box_more"><a href="#">더보기</a></li>
+                            </ul>
+                        </div>
+                        <div class="hire">채용</div>
+                        <div class="hi">인사</div>
+                        <p class="month">06월</p>
+                    </div>
+                </div>
+            </div>
+            <div class="page3_wrap">
+            <div class="page" id="page3">
+                <h5 class="p_index">News</h5>
+                <h3 class="p_tit">보도자료</h3>
+                <div class="plus"></div>
+                <div class="news_box1">
+                    <div class="date">2019-06-15</div>
+                    <p class="news_tit">기본단위 재정의 기념우표 발행</p>
+                    <p class="">과학기술정보통신부 우정사업본부(본부장 강성<br>주)는 국제단위계(SI) 구성 재정의 질량, 물질량,
+                    <br>전류, 온도 4가지 담아 기념우표를 발행한다...</p>
+                </div>
+                <div class="news_box2">
+                    <div class="date">2019-06-07</div>
+                    <p class="news_tit">우체국, 가정의 달 이벤트 풍성</p>
+                    <p class="">가정의 달을 맞아 우체국쇼핑은 최대 30% 할인<br> 우체국체크카드· 우체국보험 릴레이 이벤트...</p>
+                </div>
+            </div>
+            </div>
+            <div class="page4_wrap">
+                <div class="page" id="page4">
+                    <div class="p_box">
+                        <h5 class="p_index">Banner</h5>
+                        <h3 class="p_tit">알림존</h3>
+                    </div>
+                    <div class="b_btn"></div>
+                    <ul class="ban_box">
+                        <li><a href="#"><img src="./img/banner1.jpg" alt="b1"></a></li>
+                        <li><a href="#"><img src="./img/banner1.jpg" alt="b1"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page" id="page5">
+                <table class="group">
+                    <thead>
+                        <tr>
+                            <th>서울청</th>
+                            <th>경인청</th>
+                            <th>부산청</th>
+                            <th>충청청</th>
+                        </tr>
+                        <tr>
+                            <th>서울청</th>
+                            <th colspan="2" class="g_box g_tit">소속기관</th>
+                            <th>경북청</th>
+                        </tr>
+                        <tr>
+                            <th>전북청</th>
+                            <th colspan="2" class="g_box g_txt"><p>바로가기</p></th>
+                            <th>강원청</th>
+                        </tr>
+                        <tr>
+                            <th>제주청</th>
+                            <th><span>우정공무원</span>교육원</th>
+                            <th><span>우정사업</span>정보센터</th>
+                            <th><span>우정사업</span>조달센터</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div class="page" id="page6">
+            <div class="banner">
+               <a href="#"><img src="" alt=""></a>
+               <a href="#"><img src="" alt=""></a>
+           </div>
+        </div>
+        <div class="ft">
+           <div class="ft_black">
+                <div class="sns_icon">
+                    <a href="#"><img src="" alt=""></a>
+                    <a href="#"><img src="" alt=""></a>
+                    <a href="#"><img src="" alt=""></a>
+                </div>
+                <p class="address">
+                    (30114) 세종특별자치시 도움5로19 (어진동)<br>
+                    E-mail webpost@koreapost.go.kr<br>
+                    우정고객센터 : 044-200-8114 (평일 9:00~18:00)<br>
+                    FAX : 0505-005-1024<br>
+                    당직실 : 044-200-8841 (평일 야간, 공휴일)
+                </p>
+                <p class="copyright">
+                Copyright⒞ 2019  KOREA POST(Office of postal service).
+                <br> All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
