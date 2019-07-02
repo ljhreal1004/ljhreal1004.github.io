@@ -2,33 +2,18 @@
     <html lang="en">
     <head>
     <meta charset="UTF-8">
-    <!--웹표준 구형이 가능한 최신 브라우저로 브라우징할 수 있도록 설정-->
     <meta http-equiv="X-UA-compatible" content="IE=edge, chrome=1">
-    <!-- 스마트 기기에서 화면의 크기를 물리적 크기에 맞추어 출력-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <!-- 스마트 기기에서 화면을 풀스크린으로 보이기 위한 설정-->
     <meta name="mobile-web-app-capable" content="yes">
-    <!--비ios-->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!--ios-->
-    <!-- 웹앱 또는 모바일 웹 사이트 등의 사이트 정보를 기록 -->
     <meta name="title" content="청주시청">
     <meta name="keywords" contents="청주시청소개, 청주, 분야별 정보">
-    <!--나중에 검색어를 위해 컨텐츠는 검색어 넣어준거임-->
     <meta name="description" content="즐겁고, 자연이 함께하는 청주">
     <meta name="author" content="leejoohee">
-    <!--metapho icon의 크기
-        16*16 24*24 32*32(공통) 48*48 64*64 72*72 114*114 128*128 ~512*512
-        png형태 1개 이상
-        ico형태 1개 -->
-    <!-- 파비콘 설정 -->
     <link rel="icon" href="./img/favicion1.ico">
     <link rel="shorticon icon" href="./img/favicion1.png" type="image/x-icon">
-    <!-- 플러그인의 연결방식 - CDN, 다운로드 받아 연결 lastest이렇게 밑에 쓴것같이하면 항상 최신버전에 연결되서 사용할수있음-->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <!-- 합쳐지고 최소화된 최신 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
@@ -37,6 +22,7 @@
     <link rel="stylesheet" href="common.css">
     <title>청주시청</title>
     <style>
+        div.div.container{height: 800px;}
         .hd {
             border-bottom: 0;
         }
@@ -115,22 +101,22 @@
             content: "";
         }
 
-        .tb_data {
-            padding-left: 20px;
-        }
-
         .ci_title {
             font-size: 15px;
             font-weight: bold;
+            border-bottom: 1px solid #ccc;
         }
-
+        .ci_title p{padding-left: 20px; font-weight: bold; font-size:18.5px; padding-bottom: 3px;}
+        .ci_wrap{padding-left: 20px;}
+        .ci_wrap p{width: 87%; text-align: justify; padding-left: 28px; line-height: 22px;}
+        .ci_p img{width: 16px; height: 16px; margin-right: 8px;}
         .ci_p {
-            font-size: 13px;
+            font-size: 17px;
             font-weight: bold;
             padding-top: 30px;
+            padding-bottom: 10px;
         }
-
-        .tb_data img {
+        .tb_data .ci_img {
             width: 80%;
             padding-left: 50px;
         }
@@ -166,14 +152,26 @@
                 <div class="page" id="page1">
                     <a href="#page1" class="tb_btn">청주소개</a>
                     <div class="tb_data">
-                        <h3 class="ci_title">청주의 상징</h3>
-                        <h3 class=ci_p>CI</h3>
-                        <img src="./img/logo.jpg" alt="logo">
-                        <h3 class=ci_p>Concept</h3>
-                        <p>청주(Cheong-ju)의 대표 이니셜인 'C'와 'J'를 생명의 시작이자 창조적 가치의 원동력을 의미하는 '씨앗'으로 상징화 하였다.</p>
-                        <h3 class=ci_p>캐릭터</h3>
-                        <img src="./img/cha.jpg" alt="캐릭터">
-                        <p id="p1">"생명과 창조의 도시 청주"를<br>지키는 생이와 명이</p>
+                        <h3 class="ci_title">
+                            <p>청주의 상징</p>
+                        </h3>
+                        <div class="ci_wrap">
+                            <h3 class=ci_p>
+                                <img class=ci_fir src="./img/first.png" alt="first">CI
+                            </h3>
+                            <img class="ci_img" src="./img/logo.jpg" alt="logo">
+                            <h3 class=ci_p>
+                                <img class=ci_fir src="./img/first.png" alt="first">
+                                Concept
+                            </h3>
+                            <p>청주(Cheong-ju)의 대표 이니셜인 'C'와 'J'를 생명의 시작이자 창조적 가치의 원동력을 의미하는 '씨앗'으로 상징화 하였다.</p>
+                            <h3 class=ci_p>
+                                <img class=ci_fir src="./img/first.png" alt="first">
+                                캐릭터
+                            </h3>
+                            <img class="ci_img" src="./img/cha.jpg" alt="캐릭터">
+                            <p id="p1">"생명과 창조의 도시 청주"를<br>지키는 생이와 명이</p>
+                        </div>
                     </div>
                 </div>
                 <div class="page" id="page2">
@@ -194,7 +192,7 @@
                 <ul class="fnb">
                     <li class="item1"><a href="">이용약관</a></li>
                     <li class="item2"><a href="">개인정보처리방침</a></li>
-                    <li class="item3"><a href="">찾아오시는길</a></li>
+                    <li class="item3"><a href="./c_api.html">찾아오시는길</a></li>
                 </ul>
                 <p class="copyright">&copy; All copyrights by cheongju</p>
             </footer>
