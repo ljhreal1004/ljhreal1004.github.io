@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+	<head>
+		<title>한국조폐공사</title>
+		<meta charset="utf-8" />
+		<style>
+			*{margin: 0 auto; padding: 0; font-family:"나눔스퀘어"}
+			a{text-decoration: none; color: #666;}
+			ul li{list-style: none;}
+
+			body{width: 100%; margin: 0 auto;}
+
+			.wrapper{width: 100%;}
+			header{width: 1246px; height: 103px; padding-bottom: 12px; }
+	
+			header .top>ul{position: relative; margin-top: 77px; }
+			header .top>ul>li{font-size: 12px; float: right; }
+            header .top>ul>li{padding-left: 14px;}
+
+			header .logo{width: 100%; position: relative; clear: both;}
+            .l_icon{position: absolute; top: -80px;}
+			.l_icon li{font-size: 16px; float: left; margin-top: 13px;}
+			.l_icon li:nth-child(2n) :after{content: "|"; padding: 0 14px; }
+			.l_icon li:last-child :after{content: "";}
+
+			header .logo>ul li a img{margin-right: 5px;}
+			header .logo #img_search{float: right; margin-top: -15px;}
+            #img_logo{display: block; margin: 0 auto;}
+            
+			 .nav{width: 100%; height: 55px; position: relative; border-top: 1px solid #dcdcdc; border-bottom: 1px solid #dcdcdc; text-align: center;}
+			 .nav>ul{width: 1246px; margin: 0 auto; height: 55px;}
+			 .nav>ul>li{font-size: 18px; width: 16.66%; margin-top: 20px; font-weight: bold; float: left; text-align: center;}
+			 .nav>ul>li:after{content: "";}
+			 .nav>ul>li>a:hover{color: #217fc4;}
+
+			.vis{ width: 100%; height: 316px; background: #020e0f; margin-top: -9px;}
+			a.visual{display: block; position: relative; width: 1240px; height: 315px;  	animation: move 5s; animation-fill-mode: forwards;}
+
+			.visual<div{position: relative; top: -150px; left: 50px;}
+			.visual<div img{position: relative; left: 535px; top:0; }
+
+			.visual div .visual_text{position:relative; top: 10px; font-family: "나눔스퀘어", Cursive; color: #fff; margin: 10px;}
+			.visual .p1{font-size: 36px; padding-top:80px;  padding-left: 164px;  font-weight: bold;}
+			.visual .p2{font-size: 15px;  padding-left: 164px;}
+
+			@keyframes move{
+				from{background:url(image/visual_img.png) no-repeat; opacity: 0;}
+				to{background:url(image/visual_img.png) no-repeat 535px; opacity: 1;}
+			}
+
+			.content{width: 1246px; margin-top: 55px; }
+			.content .article ul li{padding: 23px;}
+			.content ul span{display: inline;}
+			.content .article{width: 100%; height: 200px; margin: 0 82px;}
+			.content .article .notice{width: 40%; float: left; margin-right: 85px;}
+            h3{font-size: 22px;}
+			h4{position: relative; font-size: 15px; color:#aaaaaa; padding-top: 5px;}
+			.content .article .notice ul{width: 90%; position: relative; left: 80px; top: -55px;}
+			.content .article .notice ul span{ margin-left: 80px; }
+            
+            
+			.content .article .news{width: 40%; float: left;}
+			.content .article .news h4{position: relative; font-size: 13px; color:#aaaaaa; }
+			.content .article .news ul{width: 90%;position: relative; left: 80px; top: -55px; }
+			.content .article .news ul span{ margin-left: 80px; }
+
+			.content .banner{position: relative; left: 120px; margin-top: 60px;  margin-bottom: 86px; overflow: auto;}
+			.content .banner #ban_1,#ban_2,#ban_3{width: 216px; height:150px; border: 1px solid #dcdcdc; }
+			.content .banner #ban_1{background: url(image/img1.jpg) no-repeat; float: left;}
+			.content .banner #ban_2{background: url(image/img2.jpg) no-repeat; float: left; margin-left: 18px;}
+			.content .banner #ban_3{background: url(image/img3.jpg) no-repeat; float: left; margin-left: 18px;}
+			.content .banner .ban a span{position: relative; top: 100px; left: 23px;}
+			.content .banner .ban a span:hover{cursor: pointer; font-weight: bold;}
+            .pop_cir{position: relative; left: 250px; top: 10px;}
+            .pop_cir img{width: 9px; height: 9px; padding-left: 3px;}
+            .content .pop_up{width: 246px; height: 129px; background: url(image/banner1.jpg) no-repeat; float: right;position: relative; left: -260px; top: 20px;}
+            
+			
+			.bg_m{width: 100%; height: 148px; background: #f7f6f6;}
+			.bg_m .b_menu{width: 80%; position: absolute; margin: 0 15%;}
+			.b_menu h3{position: relative; top: 38px; left: 130px; }
+			.b_menu h4{position: relative; top: 39px; left: 130px;  font-size: 15px;}
+			.b_menu>ul{position: relative; left: 100px; width: 630px; top: -15px; }
+			.b_menu>ul>li{font-size: 14.5px; float: left; width: 205px; height: 20px; padding: 10px 0;}
+
+			.b_menu>ul>li:hover{font-size: bold;}
+			
+			footer{width: 100%; clear: both; margin: 87px 0 50px 0; border-top: 1px solid #dcdcdc;}
+			footer .ft{width: 1246px;}
+			footer #logo{width: 104px; height: 35px; background: url(image/logo_gray.jpg) no-repeat; position: absolute; margin-left: 40px;}
+			footer ul{margin: 21px 0 14px 180px;  font-size: 12px;}
+			footer ul li{display: inline-block;}
+			footer ul li:after{content: "|"; padding: 0 10px;}
+			footer p{margin-left: 180px; font-size: 12px; color: #9c9c9c;}
+			footer #sns{position: absolute;width: 110px; right: 380px; top: 1410px; line-height: 32px;}
+			footer #family_site{font-size: 12px;  line-height: 21px; width: 136px; height: 21px; border: 1px solid #dcdcdc; position: absolute; top: 1415px; right: 500px; padding-left: 10px;}
+			
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="top">
+					<ul>
+						<li><a href="#">HOME</a></li>
+						<li><a href="#">사이트맵</a></li>
+						<li><a href="#">ENGLISH</a></li>
+					</ul>
+                </div>
+				<div class="logo">
+					<ul class="l_icon">
+						<li><a href="#"><img src="image/icon1.jpg" alt="icon1"></a></li>
+						<li><a href="#">화폐박물관</a></li>
+						<li><a href="#"><img src="image/icon2.jpg" alt="icon2"></a></li>
+						<li><a href="#"> 쇼핑몰</a></li>
+						<li><a href="#"><img src="image/icon3.jpg" alt="icon3"></a></li>
+						<li><a href="#"> 화폐본부 견학신청</a></li>
+					</ul>
+					<a href="#"><img id="img_logo" src="image/logo.jpg" alt="로고"></a>
+					<img id="img_search" src="image/search_03.jpg" alt="검색바">
+				</div>
+			</header>
+			<div class="nav">
+					<ul>
+						<li><a href="#">정보공개</a></li>
+						<li><a href="#">지원</a></li>
+						<li><a href="#">사업</a></li>
+						<li><a href="#">R&amp;D</a></li>
+						<li><a href="#">홍보</a></li>
+						<li><a href="#">KOMSCO</a></li>
+					</ul>
+				</div>
+			<section class="vis">
+				<a class="visual" href="#">
+					<div>
+						<p class="visual_text p1">기술로 가치를 만듭니다.</p>
+						<p class="visual_text p2">세계 최고의 조폐 인증 보안 서비스 기업</p>
+					</div>
+				</a>
+			</section>
+			<section class="content">
+				<div class="article">
+					<div class="notice">
+						<h3>새소식</h3>
+						<h4>더보기 ></h4>
+						<ul>
+							<li class="bold"><a href="#">3·1운동 및 대한민국임시정부 수립...</a><span>02.14</span></li>
+							<li class="bold"><a href="#">공공기관 국민소통 조사 관련 개인...</a><span>01.14</span></li>
+							<li class="bold"><a href="#">3·1운동 및 대한민국임시정부 수립...</a><span>12.24</span></li>
+						</ul>
+					</div>
+					<div class="news">
+						<h3>보도자료</h3>
+						<h4>더보기 ></h4>
+						<ul>
+							<li class="bold"><a href="#">조폐공사, ‘1사1촌’ 지역사랑 활동 펼쳐</a><span>02.18</span></li>
+							<li class="bold"><a href="#">조폐공사 블록체인 공공플랫폼으로 ...</a><span>02.14</span></li>
+							<li class="bold"><a href="#">조폐공사, ‘김수환 추기경 선종 10주...</a><span>02.11</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="banner">
+					<div id="ban_1" class="ban"><a href="#"><span>KOMSCO의 해외수출</span></a></div>
+					<div id="ban_2" class="ban"><a href="#"><span>KOMSCO의 기술력</span></a></div>
+					<div id="ban_3" class="ban"><a href="#"><span>KOMSCO의 미래</span></a></div>
+                    <div class="pop_cir">
+                        <img src="./image/b_circle.png" alt="b_circle">
+                        <img src="./image/g_circle.png" alt="g_circle">
+                        <img src="./image/g_circle.png" alt="g_circle">
+					</div>
+					<div class="pop_up"></div>
+				</div>	
+			</section>
+			<div class="bg_m">
+				<div class="b_menu">
+					<h3>빠른메뉴</h3>
+					<h4>바로가기 ></h4>
+					<ul>
+						<li><a href="#">동반성장</a></li>
+						<li><a href="#">경영공시</a></li>
+						<li><a href="#">Clean 청렴</a></li>
+						<li><a href="#">사규공개</a></li>
+						<li><a href="#">사규 재 개정 예고</a></li>
+						<li><a href="#">카드발급조회</a></li>
+					</ul>
+				</div>
+			</div>
+			<footer>
+				<div class="ft">
+					<div id="logo"></div>
+					<ul>
+						<li><a href="#">화폐박물관</a></li>
+						<li><a href="#">수표제품발주</a></li>
+						<li><a href="#">전자세금계산서</a></li>
+						<li><a href="#">전자조달통합시스템</a></li>
+						<li><a href="#">공익신고</a></li>
+						<li><a href="#">복지보조금부정신고센터</a></li>
+						<li><a href="#">예산낭비신고센터</a></li>
+						<li><a href="#">대한민국 정부</a></li>
+						<li><a href="#">안전신문고</a></li>
+					</ul>
+					<p>대전광역시 유성구 과학로 80-67(가정동)    Tel :1577-4321 </p>
+					<p>COPYRIGHT (C) 2013 KOMSCO CO. LTD.   ALL RIGHTS RESERVED</p>
+					<div id="sns">
+						<a href="#"><img src="image/facebook.jpg" alt="facebook"></a>
+						<a href="#"><img src="image/twiter.jpg" alt="twiter"></a>
+						<a href="#"><img src="image/instagram.jpg" alt="instagram"></a>
+						
+					</div>
+					<div id="family_site">FAMILY SITE ▾</div>
+			</div>
+			</footer>
+		</div>
+	</body>
+</html>

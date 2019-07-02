@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box; font-family:'나눔스퀘어', cursive;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: #555;}
+
+body{font-size: 17px;}
+#wrapper{width: 100%;}
+header{width: 13%; height: 100%; position: fixed; left: 0; top: 0; background: #fff;}
+.logo{width: 150px; height: 60px; position: absolute; top: 45px; left: 45px; text-align: center;}
+.gnb{width: 55%; position: absolute; top: 190px; left: 45px;}
+.gnb li{margin-left: 45px; padding-top: 10px;}
+.sns{position: absolute; bottom: 80px; left: 27%; }/*px로 주었기때문에 아래에서 80px 유지*/
+nav{width: 87%; background: #217fc4; margin-left: 13%; line-height: 40px; }
+nav a{margin-left: 15px; color: #fff;}
+nav a img{position: relative; top: 2px;}
+section{margin-left: 13%; }
+article{height: 400px; float: left;}
+article>div{width: 100%; height: 100%; position: relative; cursor: pointer; font-family:'나눔스퀘어', cursive; font-size: 24px;}
+
+article:nth-child(1){width: 50%;}
+article:nth-child(2){width: 50%;}
+article:nth-child(3){width: 25%;}
+article:nth-child(4){width: 25%;}
+article:nth-child(5){width: 25%;}
+article:nth-child(6){width: 25%;}
+article:nth-child(7){width: 25%;}
+article:nth-child(8){width: 25%;}
+article:nth-child(9){width: 25%;}
+article:nth-child(10){width: 25%;}
+
+article .bg1{background: url(../image/GKGK.png);}
+article .bg2{padding-top: 100px; background: #f7f6f6;}
+article .bg3{background: url(../image/DFHSDJFHAK.png);}
+article .bg4{padding-top: 100px; background: #cddae9;}
+article .bg5{background: url(../image/asdf1.png);}
+article .bg6{padding-top: 100px; background: #cddae9;}
+article .bg7{background: url(../image/glgl.png);}
+article .bg8{padding-top: 100px; background: #f7f6f6;}
+article .bg9{background: url(../image/container-3754776_1920.jpg);}
+article .bg10{padding-top: 150px; background: #f7f6f6;}
+article .bg{background-position: center; background-repeat: no-repeat; background-size: cover; font-size: 36px;
+			text-align: center;}/*순서를 생각해서 넣어줘야 background cover가 먹는다.*/
+
+article .bg10 span{transform: rotateY(0deg); transition: transform 0.5s; font-size: 150px; right: 10px; bottom: -50px; color: #fff; position: absolute;}
+article .bg10:hover span{transform: rotateY(360deg); font-size: 150px;}
+
+
+@media screen and (min-width: 1280px) and (max-width: 1599px){
+	header{width: 100%; height: 90px; position: relative;}
+	.logo{width: 150px; height: 60px; top: 20px; left: 20px; margin-left: 0;}
+	.gnb{top: 30px; left: 40px;}
+	.gnb li{float: left; width: 20%; position: relative; right: -100px; }
+	nav{width: 100%; margin-left: 0;}
+	.sns{right: 0; top: 40px; margin-left: 60%;}
+	section{width: 100%; margin-left: 0;}
+	article{height: 300px;}
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px){
+	header{width: 100%; height: 90px; position: relative;}
+	.logo{width: 150px; height: 60px; left: 20px; top: 25px;}
+	.gnb{top: 30px; left: 30%; width: 65%;}
+	.gnb li{float: left;}
+	.gnb li:nth-child(6){display: none;}
+	.sns{display: none;}
+	nav{width: 100%; margin-left: 0;}
+	section{width: 100%; height: 100%; margin-left: 0;}
+	article:nth-child(1){width: 40%;}
+	article:nth-child(2){width: 30%;}
+	article:nth-child(3){width: 30%;}
+	article:nth-child(4){width: 40%;}
+	article:nth-child(5){width: 30%;}
+	article:nth-child(6){width: 30%;}
+	article:nth-child(7){display: none;}
+	article:nth-child(8){display: none;}
+	article:nth-child(9){width: 40%;}
+	article:nth-child(10){width: 60%;}
+}
+@media screen and (min-width: 780px) and (max-width: 1023px){
+	header{width: 100%; height: 90px; position: relative;}
+	.logo{margin-top: -30px; margin-left: -3%;}
+	.gnb{width: 60%; top: 35px; left: 35%;}
+	.gnb li{float: left;}
+	.gnb li:nth-child(6){display: none;}
+	.sns{display: none;}
+	nav{width: 100%; margin-left: 0;}
+	section{width: 100%; margin-left: 0;}
+	article{height: 270px;}
+	article .bg5{ font-size: 24px;}
+	article:nth-child(1){width: 60%;}
+	article:nth-child(2){display: none;}
+	article:nth-child(3){width: 40%;}
+	article:nth-child(4){width: 30%;}
+	article:nth-child(5){width: 30%;}
+	article:nth-child(6){width: 40%;}
+	article:nth-child(7){display: none;}
+	article:nth-child(8){display: none;}
+	article:nth-child(9){width: 30%;}
+	article:nth-child(10){width: 70%;}
+}
+@media screen and (min-width: 640px) and (max-width: 779px){
+	header{width: 100%; height: 100px; position: relative;}
+	.logo{margin-top: -22px; margin-left: -3%;}
+	.gnb{width: 75%; top: 30px; left: 23px;}
+	.gnb li{float: left;}
+	.gnb li:nth-child(6){display: none;}
+	.sns{display: none;}
+	nav{width: 100%; margin-left: 0; display: none;}
+	section{width: 100%; margin-left: 0;}
+	article{height: 260px;}
+	article .bg2, article .bg5, article .bg7{font-size: 24px; border: 1px solid #dadada;}
+	article:nth-child(1){width: 100%;}
+	article:nth-child(2){width: 40%;}
+	article:nth-child(3){width: 60%;}
+	article:nth-child(4){width: 45%;}
+	article:nth-child(5){width: 55%;}
+	article:nth-child(6){width: 45%;}
+	article:nth-child(7){width: 55%;}
+	article:nth-child(8){display: none;}
+	article:nth-child(9){display: none;}
+	article:nth-child(10){display: none;}
+}
+@media screen and (min-width: 480px) and (max-width: 639px){
+	header{width: 100%; height: 120px; position: relative;}
+	.logo{margin-top: -25px; margin-left: -77px; left: 50%;}
+	.gnb{top: 70px; left: -2%; width: 100%;}
+	.gnb li{float: left; margin-left: 50px;}
+	.gnb li:nth-child(5){display: none;}
+	.gnb li:nth-child(6){display: none;}
+	.sns{display: none;}
+	nav{width: 100%; margin-left: 0; display: none;}
+	section{width: 100%; margin-left: 0;}
+	article{height: 230px;}
+	article .bg2, article .bg5, article .bg7{font-size: 24px; padding: 60px; border: 1px solid #dadada;}
+	article:nth-child(1){width: 100%;}
+	article:nth-child(2){width: 50%;}
+	article:nth-child(3){width: 50%;}
+	article:nth-child(4){width: 50%;}
+	article:nth-child(5){width: 50%;}
+	article:nth-child(6){width: 50%;}
+	article:nth-child(7){width: 50%;}
+	article:nth-child(8){display: none;}
+	article:nth-child(9){display: none;}
+	article:nth-child(10){display: none;}
+}
+@media screen and (max-width: 479px){
+	header{width: 100%; height: 120px; position: relative;}
+	.logo{margin-top: -25px; margin-left: -77px; left: 50%;}
+	.gnb{width: 100%; top: 70px; left: 1%;}
+	.gnb li{float: left;}
+	.gnb li:nth-child(5){display: none;}
+	.gnb li:nth-child(6){display: none;}
+	.sns{display: none;}
+	nav{width: 100%; margin-left: 0; display: none;}
+	section{width: 100%; margin-left: 0;}/*구조가 틀어질까봐 계쏙해서 넣어주는거임*/
+	article{height: 250px;}
+	article .bg5, article .bg7{font-size: 24px; padding-top: 80px; border: 1px solid #dadada; box-sizing: border-box;}
+	article:nth-child(1){width: 100%;}
+	article:nth-child(2){display: none;}
+	article:nth-child(3){display: none;}
+	article:nth-child(4){width: 50%;}
+	article:nth-child(5){width: 50%;}
+	article:nth-child(6){width: 50%;}
+	article:nth-child(7){width: 50%;}
+	article:nth-child(8){display: none;}
+	article:nth-child(9){display: none;}
+	article:nth-child(10){display: none;}
+}
